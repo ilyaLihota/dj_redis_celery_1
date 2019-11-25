@@ -1,11 +1,16 @@
+import logging
 import redis
 
 from django.conf import settings
 from django.shortcuts import render
 from django.views import View
-from .tasks import send_email, get_factorial
-from .forms import CalculateForm
 
+from .forms import CalculateForm
+from .tasks import send_email, get_factorial
+
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
 
 r = redis.StrictRedis(host=settings.REDIS_HOST,
                       port=settings.REDIS_PORT,
@@ -27,8 +32,12 @@ class Calculate(View):
             total_views = r.incr('page:views')
             number = form.cleaned_data['value']
 
-            get_factorial.delay(int(number))
-            send_email.delay(total_views)
+            email = send_email.delay(total_views)
+            factorial = get_factorial.delay(int(number))
+
+
+            logger.info('Factorial:', factorial)
+            logger.error('Email:', email)
 
         else:
             form = CalculateForm()
