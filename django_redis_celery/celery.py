@@ -1,7 +1,7 @@
 import os
 from celery import Celery
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'payment_tracking.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'study.settings')
 
 app = Celery('study')
 
