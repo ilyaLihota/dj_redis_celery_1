@@ -9,7 +9,9 @@
     <form action="." method="post">
         {% csrf_token %}
         {{ form.as_p }}
+        <p>Factorial {{ number }}: {{ factorial }}</p>
         <p><input type="submit" value="Calculate"></p>
     </form>
+    <a href="{% url 'send_email' %}">Send the amount of viewers to the email</a>
 </body>
 </html>
