@@ -2,11 +2,12 @@ import logging
 import redis
 
 from django.conf import settings
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.views import View
 
 from .forms import CalculateForm
-from .tasks import send_email, get_factorial
+from .tasks import send_email_to_me, get_factorial
 
 
 # Get an instance of a logger
@@ -17,29 +18,43 @@ r = redis.StrictRedis(host=settings.REDIS_HOST,
                       db=settings.REDIS_DB)
 
 
-class Calculate(View):
+class CalculateFactorial(View):
     def get(self, request):
         total_views = r.incr('page:views')
         form = CalculateForm()
+        logger.info('Get a page study/.')
+
         return render(request, 'study/base.html', {'form': form,
                                                    'total_views': total_views,
                                                   })
 
     def post(self, request):
-        form = CalculateForm(request.POST)
+        bound_form = CalculateForm(request.POST)
+        logger.info('Get a completed form.')
 
-        if form.is_valid():
-            total_views = r.incr('page:views')
-            number = form.cleaned_data['value']
+        if bound_form.is_valid():
+            total_views = int(r.get('page:views'))
+            number = bound_form.cleaned_data['value']
+            result = get_factorial.delay(int(number))
+            factorial = result.get()
+            logger.info('Get a factorial and sent page with result.')
 
-            email = send_email.delay(total_views)
-            factorial = get_factorial.delay(int(number))
-
-
-            logger.info('Factorial:', factorial)
-            logger.error('Email:', email)
-
+            return render(request, 'study/base.html', {'form': bound_form,
+                                                       'total_views': total_views,
+                                                       'number': number,
+                                                       'factorial': factorial,
+                                                      })
         else:
+            logger.error('Form isn''t valid.')
             form = CalculateForm()
 
         return render(request, 'study/base.html', {'form': form})
+
+
+class SendEmail(View):
+    def get(self, request):
+        total_views = int(r.get('page:views'))
+        send_email_to_me(total_views)
+        logger.info('Sent email with the amount of views.')
+
+        return HttpResponse('Result sent to email!')

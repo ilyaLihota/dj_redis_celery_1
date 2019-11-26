@@ -113,9 +113,24 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
-# Email settings
+# Admins
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ADMINS = [
+    ('admin', 'lichota.test@gmail.com'),
+]
+
+
+# Email settings
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'test@gmail.com'
+EMAIL_HOST_PASSWORD = 'very_hard_password'
+EMAIL_USE_TLS = True
+
+SERVER_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
 # REDIS related settings
@@ -136,7 +151,7 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'simple': {
-            'format': '{levelname} {message}',
+            'format': '{levelname} {name} {message}',
             'style': '{',
         },
         'verbose': {
@@ -154,7 +169,7 @@ LOGGING = {
         'mail_admins': {
             'level': 'ERROR',
             'class': 'django.utils.log.AdminEmailHandler',
-            'email_backend': 'django.core.mail.backends.filebased.EmailBackend',
+            'email_backend': 'django.core.mail.backends.smtp.EmailBackend',
             'formatter': 'verbose',
         },
     },
@@ -167,7 +182,7 @@ LOGGING = {
         'django.request': {
             'handlers': ['mail_admins'],
             'level': 'ERROR',
-            'propagate': True,
+            'propagate': False,
         },
     },
 }
