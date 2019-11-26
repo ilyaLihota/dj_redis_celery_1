@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 's#&mhn4dc%1v0g@-5g5h$jakfybw_ts#kn%o#@_fa6r3wk8$@4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost',
                  '127.0.0.1',
@@ -121,12 +121,13 @@ ADMINS = [
 
 
 # Email settings
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'test@gmail.com'
-EMAIL_HOST_PASSWORD = 'very_hard_password'
+EMAIL_HOST_USER = 'lichota.test@gmail.com'
+EMAIL_HOST_PASSWORD = 'my_password'
 EMAIL_USE_TLS = True
 
 SERVER_EMAIL = EMAIL_HOST_USER
@@ -169,13 +170,12 @@ LOGGING = {
         'mail_admins': {
             'level': 'ERROR',
             'class': 'django.utils.log.AdminEmailHandler',
-            'email_backend': 'django.core.mail.backends.smtp.EmailBackend',
             'formatter': 'verbose',
         },
     },
     'loggers': {
         'django': {
-            'handlers': ['file'],
+            'handlers': ['file', 'mail_admins'],
             'level': 'INFO',
             'propagate': True,
         },
