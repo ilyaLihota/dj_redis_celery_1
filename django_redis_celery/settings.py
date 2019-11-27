@@ -130,8 +130,8 @@ EMAIL_HOST_USER = 'lichota.test@gmail.com'
 EMAIL_HOST_PASSWORD = 'my_password'
 EMAIL_USE_TLS = True
 
-SERVER_EMAIL = EMAIL_HOST_USER
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+# SERVER_EMAIL = EMAIL_HOST_USER
+# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 
 # REDIS related settings
@@ -160,29 +160,35 @@ LOGGING = {
             'style': '{',
         },
     },
+    'filters': {
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
     'handlers': {
         'file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
             'filename': './info.log',
             'formatter': 'simple',
+            'filters': ['require_debug_true',],
         },
         'mail_admins': {
             'level': 'ERROR',
             'class': 'django.utils.log.AdminEmailHandler',
             'formatter': 'verbose',
+            'filters': ['require_debug_true',],
         },
     },
     'loggers': {
         'django': {
-            'handlers': ['file', 'mail_admins'],
+            'handlers': ['file', 'mail_admins',],
             'level': 'INFO',
             'propagate': True,
         },
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': False,
+        'django.server': {
+            'handlers': ['mail_admins',],
+            'level': 'INFO',
         },
     },
 }

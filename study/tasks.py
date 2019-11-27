@@ -18,16 +18,18 @@ def send_email_to_me(amount_of_view: int):
 
 
 @app.task
-def get_factorial(number: int) -> (int, str):
+def get_factorial(number: int) -> int:
     """
     Returns the factorial of a number.
     """
-    if isinstance(number, int) and number >= 0:
+    if number >= 0:
         factorial = 1
 
         for el in range(1, number+1):
             factorial *= el
 
-        return factorial
+        yield factorial
 
-    return "Factorial is defined for non-negative integers."
+    raise ValueError('Factorial is defined for non-negative integers.')
+
+
