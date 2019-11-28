@@ -4,15 +4,15 @@ import redis
 from django.conf import settings
 from django.http import HttpResponse
 from django.views import View
-from functools import reduce
-from django.urls import reverse_lazy
 from django.views.generic.edit import FormView
+from django.urls import reverse_lazy
+from functools import reduce
 
 from .forms import CalculateForm
-from .tasks import send_email_to_me
+from .tasks import send_email_to_me, get_factorial
 
 
-# Get an instance of a logger
+# Get an instance of a logger.
 logger = logging.getLogger(__name__)
 
 r = redis.StrictRedis(host=settings.REDIS_HOST,
@@ -22,7 +22,7 @@ r = redis.StrictRedis(host=settings.REDIS_HOST,
 
 class CalculateFactorial(FormView):
     """
-    Calculates a factorial of number.
+    Calculates a factorial of the number.
     """
     form_class = CalculateForm
     template_name = 'study/base.html'
@@ -49,14 +49,19 @@ class CalculateFactorial(FormView):
         except:
             logger.error('Failed to type integer!')
             return HttpResponse('You should input a non-negative integer!')
-        if number > 0:
-            factorial = reduce(lambda x, y: x * y, range(1, number + 1))
-        elif number == 0:
-            factorial = 1
         else:
-            logger.error('Inputed negative integer!')
+            result = get_factorial.delay(number)
+        while not result.ready():
+            continue
+        try:
+            factorial = result.get()
+            logger.info('Get a factorial.')
+        except:
+            logger.error('Negative integer!')
             return HttpResponse('You should input a non-negative integer!')
-        logger.info('Get a factorial and sent page with the result.')
+
+        # Save factorial in Redis db.
+        r.set('factorial:{}'.format(number), factorial)
         return self.render_to_response({'form': form,
                                         'total_views': total_views,
                                         'number': number,
@@ -80,14 +85,15 @@ class CalculateFactorial(FormView):
 
 class SendEmail(View):
     """
-    Send email to admin with amount of views of page.
+    Send email to admin with amount of page views.
     """
-    def get(self, request):
+    def get(self, request, number):
         try:
             total_views = int(r.get('page:views'))
         except:
             total_views = r.set('page:views', 0)
             logger.error('Wrong type of page:views! Set 0.')
-        send_email_to_me.delay(total_views)
+        factorial = int(r.get('factorial:{}'.format(number)))
+        send_email_to_me.delay(total_views, number, factorial)
         logger.info('Sent email with the amount of views.')
         return HttpResponse('Result sent to email!')
