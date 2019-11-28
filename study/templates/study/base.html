@@ -12,6 +12,8 @@
         <p>Factorial {{ number }}: {{ factorial }}</p>
         <p><input type="submit" value="Calculate"></p>
     </form>
-    <a href="{% url 'send_email' %}">Send the amount of viewers to the email</a>
+    {% if number %}
+        <a href="/study/send_email/{{ number }}/">Send the result to the email</a>
+    {% endif %}
 </body>
 </html>
