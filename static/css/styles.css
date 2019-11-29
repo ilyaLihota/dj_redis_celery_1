@@ -3,8 +3,14 @@
      margin: auto;
      top: 0;
      right: 0;
-     bottom: 0;
+     bottom: 400px;
      left: 0;
      width: 100px;
      height: 100px;
+
+     bakground-color: #d4d4d4;
+}
+
+.padding {
+    padding: 30px;
 }

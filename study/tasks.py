@@ -1,5 +1,3 @@
-import time
-
 from django_redis_celery.celery import app
 from django.conf import settings
 from django.core.mail import send_mail
@@ -7,7 +5,11 @@ from django.core.mail import send_mail
 
 cash = {}
 
+
 def cash_factorial(func):
+    """
+    Cashes function results.
+    """
     def inner(number: int):
         if number in cash.keys():
             print('Cashed result: {}'.format(cash[number]))
@@ -42,10 +44,7 @@ def get_factorial(number: int) -> int:
     """
     if number >= 0:
         factorial = 1
-
         for el in range(1, number+1):
             factorial *= el
-
         return factorial
-
     raise ValueError('Factorial is defined for non-negative integers.')
