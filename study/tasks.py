@@ -1,16 +1,17 @@
+import time
+
 from django_redis_celery.celery import app
 from django.conf import settings
 from django.core.mail import send_mail
 
 
-def cash_factorial(func):
-    cash = {}
-    def inner(number: int):
+cash = {}
 
+def cash_factorial(func):
+    def inner(number: int):
         if number in cash.keys():
             print('Cashed result: {}'.format(cash[number]))
             return cash[number]
-
         result = func(number)
         cash[number] = result
         return result

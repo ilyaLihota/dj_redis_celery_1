@@ -1,19 +1,30 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
     <title>Title</title>
 </head>
 <body>
-    <p>Amount of views: {{ total_views }}.</p>
-    <form action="." method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <p>Factorial {{ number }}: {{ factorial }}</p>
-        <p><input type="submit" value="Calculate"></p>
-    </form>
-    {% if number %}
-        <a href="/study/send_email/{{ number }}/">Send the result to the email</a>
-    {% endif %}
+    <div class="center-div">
+        <div class="card text-center" style="width: 18rem;">
+            <p>Amount of views: {{ total_views }}.</p>
+            <form action="." method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                {% if number >= 0 %}
+                    <p>{{ number }}! = {{ factorial|truncatechars:20 }}</p>
+                {% endif %}
+                <p><input type="submit" class="btn btn-primary" value="Calculate"></p>
+            </form>
+            {% if number >= 0 %}
+                <p>
+                    <a href="/study/send_email/{{ number }}/">Send the result to the email</a>
+                </p>
+            {% endif %}
+        <div/>
+    </div>
 </body>
 </html>

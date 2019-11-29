@@ -6,7 +6,6 @@ from django.http import HttpResponse
 from django.views import View
 from django.views.generic.edit import FormView
 from django.urls import reverse_lazy
-from functools import reduce
 
 from .forms import CalculateForm
 from .tasks import send_email_to_me, get_factorial
@@ -31,7 +30,7 @@ class CalculateFactorial(FormView):
     def get(self, request, *args, **kwargs):
         try:
             r.incr('page:views')
-        except:
+        except Exception:
             r.set('page:views', 0)
             logger.error('Wrong type of page:views! Set 0.')
         logger.info('Get a page study/.')
@@ -40,13 +39,13 @@ class CalculateFactorial(FormView):
     def form_valid(self, form):
         try:
             total_views = int(r.get('page:views'))
-        except:
+        except Exception:
             total_views = r.set('page:views', 0)
             logger.error('Wrong type of page:views! Set 0.')
-        number = form.cleaned_data['value']
+        number = form.cleaned_data['number']
         try:
             number = int(number)
-        except:
+        except Exception:
             logger.error('Failed to type integer!')
             return HttpResponse('You should input a non-negative integer!')
         else:
@@ -56,10 +55,9 @@ class CalculateFactorial(FormView):
         try:
             factorial = result.get()
             logger.info('Get a factorial.')
-        except:
+        except Exception:
             logger.error('Negative integer!')
             return HttpResponse('You should input a non-negative integer!')
-
         # Save factorial in Redis db.
         r.set('factorial:{}'.format(number), factorial)
         return self.render_to_response({'form': form,
@@ -77,7 +75,7 @@ class CalculateFactorial(FormView):
         # Add to the context our data.
         try:
             context['total_views'] = int(r.get('page:views'))
-        except:
+        except Exception:
             logger.error('Failed to type integer!')
             context['total_views'] = r.set('page:views', 0)
         return context
@@ -90,7 +88,7 @@ class SendEmail(View):
     def get(self, request, number):
         try:
             total_views = int(r.get('page:views'))
-        except:
+        except Exception:
             total_views = r.set('page:views', 0)
             logger.error('Wrong type of page:views! Set 0.')
         factorial = int(r.get('factorial:{}'.format(number)))
