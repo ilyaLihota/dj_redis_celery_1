@@ -8,7 +8,7 @@ from django.views.generic.edit import FormView
 from django.urls import reverse_lazy
 
 from .forms import CalculateForm
-from .tasks import send_email_to_me, get_factorial
+from django_redis_celery.tasks import send_email_to_me, get_factorial
 
 
 # Get an instance of a logger.
@@ -92,6 +92,7 @@ class SendEmail(View):
             total_views = r.set('page:views', 0)
             logger.error('Wrong type of page:views! Set 0.')
         factorial = int(r.get('factorial:{}'.format(number)))
-        send_email_to_me.delay(total_views, number, factorial)
+        result = send_email_to_me.delay(total_views, number, factorial)
         logger.info('Sent email with the amount of views.')
+        result.forget()
         return HttpResponse('Result sent to email!')

@@ -1,6 +1,7 @@
-from django_redis_celery.celery import app
 from django.conf import settings
 from django.core.mail import send_mail
+
+from .celery import app
 
 
 cash = {}
