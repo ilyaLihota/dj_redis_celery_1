@@ -10,6 +10,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('study/', include('study.urls')),
     path('course/', include('courses.urls')),
+    path('api/', include('courses.api.urls', namespace='api')),
 ]
 
 if settings.DEBUG:

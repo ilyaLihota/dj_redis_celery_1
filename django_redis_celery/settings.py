@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'study.apps.StudyConfig',
     'courses.apps.CoursesConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -189,4 +190,11 @@ LOGGING = {
             'propagate': False,
         },
     },
+}
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    ],
 }

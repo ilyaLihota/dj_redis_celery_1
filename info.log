@@ -3472,3 +3472,261 @@ INFO django.server "GET /admin/ HTTP/1.1" 302 0
 INFO django.server "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
 INFO django.server "GET /static/admin/css/login.css HTTP/1.1" 200 1233
 INFO django.server "GET /accounts/logout/ HTTP/1.1" 200 1207
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+WARNING django.server "GET / HTTP/1.1" 404 2534
+WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2585
+WARNING django.server "GET /account HTTP/1.1" 404 2573
+WARNING django.server "GET /account/login HTTP/1.1" 404 2591
+INFO django.server "GET /accounts/login HTTP/1.1" 301 0
+INFO django.server "GET /accounts/login/ HTTP/1.1" 200 1416
+INFO django.server "GET /static/css/base.css HTTP/1.1" 200 3570
+WARNING django.server "GET /accounts/logiout HTTP/1.1" 404 2600
+INFO django.server "GET /accounts/logout HTTP/1.1" 301 0
+INFO django.server "GET /accounts/logout/ HTTP/1.1" 200 1207
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 200 17944
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO django.server "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO django.server "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+INFO django.server "GET /accounts/login/ HTTP/1.1" 200 1416
+INFO django.server "GET /course/mine HTTP/1.1" 301 0
+INFO django.server "GET /course/mine/ HTTP/1.1" 302 0
+INFO django.server "GET /accounts/login/?next=/course/mine/ HTTP/1.1" 200 1429
+INFO django.server "POST /accounts/login/ HTTP/1.1" 200 1593
+INFO django.server "POST /accounts/login/ HTTP/1.1" 200 1593
+INFO django.server "POST /accounts/login/ HTTP/1.1" 200 1596
+INFO django.server "GET /admin HTTP/1.1" 301 0
+INFO django.server "GET /admin/ HTTP/1.1" 302 0
+INFO django.server "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+INFO django.server "GET /static/admin/css/login.css HTTP/1.1" 200 1233
+INFO django.server "GET /accounts/logout/ HTTP/1.1" 200 1207
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 200 17944
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2585
+INFO django.server "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO django.server "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+INFO django.server "POST /admin/login/?next=/admin/ HTTP/1.1" 200 1980
+INFO django.server "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO django.server "GET /admin/ HTTP/1.1" 200 4165
+INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO django.server "GET /admin/auth/user/ HTTP/1.1" 200 6600
+INFO django.server "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271817
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 200 7099
+INFO django.server "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO django.server "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO django.server "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO django.server "GET /admin/ HTTP/1.1" 200 4165
+INFO django.server "GET /admin/courses/course/ HTTP/1.1" 200 4355
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/ HTTP/1.1" 200 4165
+INFO django.server "GET /admin/auth/group/ HTTP/1.1" 200 3502
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/ HTTP/1.1" 200 4165
+WARNING django.server "GET / HTTP/1.1" 404 2534
+INFO django.server "GET /study HTTP/1.1" 301 0
+INFO django.server "GET /study/ HTTP/1.1" 200 1101
+INFO django.server "GET /static/css/styles.css HTTP/1.1" 200 226
+INFO django.server "POST /study/ HTTP/1.1" 200 1326
+INFO django.server "GET /study/ HTTP/1.1" 200 1101
+INFO django.server "GET /study/ HTTP/1.1" 200 1101
+INFO django.server "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO django.server "GET /study/ HTTP/1.1" 200 1101
+INFO django.server "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO django.server "GET /study/ HTTP/1.1" 200 1101
+INFO django.server "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO django.server "GET /study/ HTTP/1.1" 200 1101
+INFO django.server "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO django.server "GET /study/ HTTP/1.1" 200 1101
+INFO django.server "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO django.server "GET /study/ HTTP/1.1" 200 1101
+INFO django.server "GET /static/css/styles.css HTTP/1.1" 304 0
+INFO django.server "POST /study/ HTTP/1.1" 200 1333
+INFO django.server "GET /study/send_email/10/ HTTP/1.1" 200 21
+INFO django.server "POST /study/ HTTP/1.1" 200 1333
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /study/ HTTP/1.1" 200 1101
+INFO django.server "GET /static/css/styles.css HTTP/1.1" 200 226
+WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2585
+INFO django.server "GET /admin/ HTTP/1.1" 200 4165
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO django.server "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+INFO django.server "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO django.server "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+INFO django.server "GET /admin/courses/subject/ HTTP/1.1" 200 3180
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 200 7099
+INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+INFO django.server "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+INFO django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO django.server "GET /admin/courses/subject/add/ HTTP/1.1" 200 4700
+INFO django.server "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+INFO django.server "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+INFO django.server "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+INFO django.server "GET /admin/courses/subject/ HTTP/1.1" 200 3180
+INFO django.server "GET /admin/courses/subject/add/ HTTP/1.1" 200 4700
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "POST /admin/courses/subject/add/ HTTP/1.1" 302 0
+INFO django.server "GET /admin/courses/subject/add/ HTTP/1.1" 200 4923
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO django.server "POST /admin/courses/subject/add/ HTTP/1.1" 302 0
+INFO django.server "GET /admin/courses/subject/add/ HTTP/1.1" 200 4921
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "POST /admin/courses/subject/add/ HTTP/1.1" 302 0
+INFO django.server "GET /admin/courses/subject/add/ HTTP/1.1" 200 4917
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "POST /admin/courses/subject/add/ HTTP/1.1" 302 0
+INFO django.server "GET /admin/courses/subject/ HTTP/1.1" 200 5732
+INFO django.server "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/subjects/ HTTP/1.1" 200 5779
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING django.server "GET /api/ HTTP/1.1" 404 2939
+INFO django.server "GET /api/subjects/ HTTP/1.1" 200 5779
+INFO django.server "GET /api/subjects/ HTTP/1.1" 200 179
+WARNING django.server "POST /api/subjects/ HTTP/1.1" 403 58
+INFO django.server "GET /api/subjects/ HTTP/1.1" 200 179
+INFO django.server "GET /api/subjects/2 HTTP/1.1" 301 0
+INFO django.server "GET /api/subjects/2/ HTTP/1.1" 200 47
+INFO django.server "GET /api/subjects/1 HTTP/1.1" 301 0
+INFO django.server "GET /api/subjects/1/ HTTP/1.1" 200 51
+INFO django.server "GET /api/subjects/5 HTTP/1.1" 301 0
+WARNING django.server "GET /api/subjects/5/ HTTP/1.1" 404 23
+INFO django.server "GET /api/subjects/4 HTTP/1.1" 301 0
+INFO django.server "GET /api/subjects/4/ HTTP/1.1" 200 37
+INFO django.server "GET /api/subjects/4/ HTTP/1.1" 200 5481
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO django.server "OPTIONS /api/subjects/4/ HTTP/1.1" 200 5742
+INFO django.server "OPTIONS /api/subjects/4/ HTTP/1.1" 200 5742
+INFO django.server "GET /api/subjects/4/ HTTP/1.1" 200 5481
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "OPTIONS /api/subjects/4/ HTTP/1.1" 200 5742
+INFO django.server "GET /api/subjects/4/ HTTP/1.1" 200 5481
+INFO django.server "OPTIONS /api/subjects/4/ HTTP/1.1" 200 5742
+INFO django.server "OPTIONS /api/subjects/4/ HTTP/1.1" 200 5742
+INFO django.server "GET /api/subjects/4/ HTTP/1.1" 200 5481
+INFO django.server "GET /api/subjects/4/?format=json HTTP/1.1" 200 37
+INFO django.server "GET /api/subjects/4/?format=api HTTP/1.1" 200 5536
+INFO django.server "GET /api/subjects/4/?format=api HTTP/1.1" 200 5536
+INFO django.server "GET /api/subjects/4/?format=json HTTP/1.1" 200 37
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /admin/ HTTP/1.1" 200 5351
+INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO django.server "GET /admin/courses/subject/ HTTP/1.1" 200 5551
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/ HTTP/1.1" 200 5351
+INFO django.server "GET /admin/courses/course/ HTTP/1.1" 200 4776
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO django.server "GET /admin/courses/course/add/ HTTP/1.1" 200 15931
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/js/inlines.js HTTP/1.1" 200 13773
+INFO django.server "GET /admin/ HTTP/1.1" 302 0
+INFO django.server "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+INFO django.server "GET /static/admin/css/login.css HTTP/1.1" 200 1233
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 200 17944
+WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2689
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO django.server "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO django.server "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+INFO django.server "GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 560
+INFO django.server "GET /admin/courses/course/ HTTP/1.1" 200 4776
+INFO django.server "GET /admin/courses/course/add/ HTTP/1.1" 200 15931
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
