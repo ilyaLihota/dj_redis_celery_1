@@ -3730,3 +3730,1492 @@ INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1
 INFO django.utils.autoreload Watching for file changes with StatReloader
 INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
 INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+ERROR django.server "GET /api/courses/3/enroll/ HTTP/1.1" 500 114608
+ERROR django.server "GET /api/courses/1/enroll/ HTTP/1.1" 500 114608
+ERROR django.server "GET /api/courses/3/enroll/ HTTP/1.1" 500 114743
+WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2689
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/courses/api/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+ERROR django.server "GET /api/courses/3/enroll/ HTTP/1.1" 500 114743
+WARNING django.server "GET /api/subjects/4/?format=api HTTP/1.1" 404 2807
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /admin/ HTTP/1.1" 200 5351
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 200 17944
+INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2689
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/admin.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/admin.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/admin.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/admin.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /admin/ HTTP/1.1" 200 6474
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 3180
+INFO django.server "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO django.server "GET /admin/article/article/add/ HTTP/1.1" 200 6078
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/css/forms.css HTTP/1.1" 200 8518
+INFO django.server "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+INFO django.server "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+INFO django.server "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 3180
+INFO django.server "GET /study/ HTTP/1.1" 200 1102
+INFO django.server "GET /static/css/styles.css HTTP/1.1" 200 226
+WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2689
+INFO django.server "GET /admin/article/article/add/ HTTP/1.1" 200 6078
+INFO django.server "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 3180
+INFO django.server "GET /admin/article/author/ HTTP/1.1" 200 3173
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/author/add/ HTTP/1.1" 200 4455
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/author/ HTTP/1.1" 200 3173
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+ERROR django.server "GET /api/articles/ HTTP/1.1" 500 114192
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/settings.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 5271
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO django.server "GET /admin/article/ HTTP/1.1" 200 2890
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 3180
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/article/add/ HTTP/1.1" 200 6078
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 3180
+INFO django.server "GET /admin/article/ HTTP/1.1" 200 2890
+INFO django.server "GET /admin/article/author/ HTTP/1.1" 200 3173
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/author/add/ HTTP/1.1" 200 4455
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "POST /admin/article/author/add/ HTTP/1.1" 302 0
+INFO django.server "GET /admin/article/author/ HTTP/1.1" 200 4538
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO django.server "GET /admin/article/ HTTP/1.1" 200 2890
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 3180
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/article/add/ HTTP/1.1" 200 6126
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "POST /admin/article/article/add/ HTTP/1.1" 302 0
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 4552
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+ERROR django.server "GET /api/articles/ HTTP/1.1" 500 171489
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 4357
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO django.server "GET /admin/article/article/1/change/ HTTP/1.1" 200 6408
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 4357
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 4357
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 4350
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO django.server "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+INFO django.server "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+INFO django.server "GET /admin/article/article/1/change/ HTTP/1.1" 200 6386
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 4350
+INFO django.server "GET /admin/article/article/add/ HTTP/1.1" 200 6111
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 4350
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/ HTTP/1.1" 200 2890
+INFO django.server "GET /admin/article/author/ HTTP/1.1" 200 4331
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/author/1/change/ HTTP/1.1" 200 4694
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/author/ HTTP/1.1" 200 4331
+INFO django.server "GET /admin/article/ HTTP/1.1" 200 2890
+ERROR django.server "GET /api/articles/ HTTP/1.1" 500 170523
+ERROR django.server "GET /api/articles/ HTTP/1.1" 500 170523
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 5483
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING django.server "GET /api/articles/1 HTTP/1.1" 404 2754
+WARNING django.server "GET /api/articles/1/ HTTP/1.1" 404 2757
+WARNING django.server "GET /api/articles/0/ HTTP/1.1" 404 2757
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 5483
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 5448
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 7095
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 7133
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 7133
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 7133
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 116
+WARNING django.server "POST /api/articles/ HTTP/1.1" 400 41
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 116
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 116
+WARNING django.server "POST /api/articles/ HTTP/1.1" 400 41
+INFO django.server "GET /admin/article/ HTTP/1.1" 200 2890
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 4350
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/article/1/change/ HTTP/1.1" 200 6386
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 4350
+INFO django.server "GET /admin/article/ HTTP/1.1" 200 2890
+INFO django.server "GET /admin/article/author/ HTTP/1.1" 200 4331
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/ HTTP/1.1" 200 2890
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 116
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 8875
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+ERROR django.server "PUT /api/articles/ HTTP/1.1" 500 97038
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 116
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 8875
+ERROR django.server "PUT /api/articles/ HTTP/1.1" 500 97038
+WARNING django.server "GET /api/articles/0/ HTTP/1.1" 404 2931
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 8875
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 9917
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 9917
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 9917
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 4350
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/article/article/add/ HTTP/1.1" 200 6111
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "POST /admin/article/article/add/ HTTP/1.1" 302 0
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 4757
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 10141
+ERROR django.server "DELETE /api/articles/ HTTP/1.1" 500 97115
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 10141
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 10141
+WARNING django.server "GET /api/articles/1/ HTTP/1.1" 404 2931
+ERROR django.server "GET /api/articles/1 HTTP/1.1" 500 96729
+ERROR django.server "GET /api/articles/1 HTTP/1.1" 500 96729
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/articles/1 HTTP/1.1" 301 0
+ERROR django.server "GET /api/articles/1/ HTTP/1.1" 500 96743
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 10107
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2689
+ERROR django.server "GET /api/articles/1/ HTTP/1.1" 500 96878
+ERROR django.server "DELETE /api/articles/ HTTP/1.1" 500 18609
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+WARNING django.server "DELETE /api/articles/ HTTP/1.1" 404 23
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/article/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/articles/ HTTP/1.1" 200 196
+WARNING django.server "POST /api/articles/ HTTP/1.1" 400 41
+WARNING django.server "POST /api/articles/ HTTP/1.1" 400 41
+WARNING django.server "POST /api/articles/ HTTP/1.1" 400 41
+WARNING django.server "POST /api/articles/ HTTP/1.1" 400 41
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/ HTTP/1.1" 200 5639
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING django.server "GET / HTTP/1.1" 404 2638
+INFO django.server "GET /api/ HTTP/1.1" 200 5639
+ERROR django.server "GET /api/paradigms/ HTTP/1.1" 500 110665
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+ERROR django.server "GET /api/paradigms/ HTTP/1.1" 500 174554
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 8583
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 8865
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 8865
+INFO django.server "GET /api/programmers/ HTTP/1.1" 200 8968
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 8583
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 8583
+INFO django.server "POST /api/paradigms/ HTTP/1.1" 201 8956
+INFO django.server "POST /api/paradigms/ HTTP/1.1" 201 8958
+INFO django.server "GET /api/paradigms/2/ HTTP/1.1" 200 10226
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9050
+INFO django.server "POST /api/paradigms/ HTTP/1.1" 201 8968
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9289
+INFO django.server "GET /api/ HTTP/1.1" 200 5639
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9289
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 9223
+INFO django.server "GET /admin/article/article/ HTTP/1.1" 200 4573
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO django.server "GET /admin/article/ HTTP/1.1" 200 2890
+INFO django.server "GET /admin/ HTTP/1.1" 200 8981
+INFO django.server "GET /admin/languages/programmers/ HTTP/1.1" 200 3216
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/ HTTP/1.1" 200 8981
+INFO django.server "GET /admin/languages/paradigm/ HTTP/1.1" 200 4830
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/languages/paradigm/3/change/ HTTP/1.1" 200 4249
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/languages/paradigm/ HTTP/1.1" 200 4830
+INFO django.server "POST /api/languages/ HTTP/1.1" 201 9734
+INFO django.server "POST /api/languages/ HTTP/1.1" 201 9738
+INFO django.server "POST /api/languages/ HTTP/1.1" 201 9744
+INFO django.server "POST /api/languages/ HTTP/1.1" 201 9740
+INFO django.server "POST /api/languages/ HTTP/1.1" 201 9740
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11111
+INFO django.server "POST /api/languages/ HTTP/1.1" 201 9744
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11491
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11491
+INFO django.server "GET /api/ HTTP/1.1" 200 5639
+INFO django.server "GET /admin/languages/ HTTP/1.1" 200 3399
+INFO django.server "GET /admin/languages/language/ HTTP/1.1" 200 5474
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/languages/language/6/change/ HTTP/1.1" 200 5468
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/languages/language/ HTTP/1.1" 200 5474
+INFO django.server "GET /api/programmers/ HTTP/1.1" 200 9542
+INFO django.server "POST /api/programmers/ HTTP/1.1" 201 10080
+INFO django.server "POST /api/programmers/ HTTP/1.1" 201 10224
+INFO django.server "GET /api/programmers/ HTTP/1.1" 200 10488
+INFO django.server "GET /api/ HTTP/1.1" 200 5639
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11491
+INFO django.server "GET /api/paradigms/2/ HTTP/1.1" 200 10226
+INFO django.server "GET /api/languages/6/ HTTP/1.1" 200 11054
+INFO django.server "DELETE /api/languages/6/ HTTP/1.1" 200 10549
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11111
+INFO django.server "GET /api/languages/3/ HTTP/1.1" 200 11054
+INFO django.server "PUT /api/languages/3/ HTTP/1.1" 200 11054
+INFO django.server "GET /api/paradigms/1/ HTTP/1.1" 200 10223
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9289
+INFO django.server "GET /api/ HTTP/1.1" 200 5639
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11111
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 609
+INFO django.server "GET /api/paradigms/1/ HTTP/1.1" 200 74
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11372
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api-auth/logout/?next=/api/languages/ HTTP/1.1" 302 0
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11144
+INFO django.server "GET /api-auth/login/?next=/api/languages/ HTTP/1.1" 200 2715
+INFO django.server "POST /api-auth/login/ HTTP/1.1" 302 0
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11372
+INFO django.server "POST /api/languages/ HTTP/1.1" 201 9999
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11749
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11749
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11749
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/settings.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11749
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11749
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11749
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api-auth/logout/?next=/api/languages/ HTTP/1.1" 302 0
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 7655
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/settings.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 7655
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api-auth/login/?next=/api/languages/ HTTP/1.1" 200 2715
+INFO django.server "POST /api-auth/login/ HTTP/1.1" 200 2950
+INFO django.server "POST /api-auth/login/ HTTP/1.1" 200 2950
+INFO django.server "POST /api-auth/login/ HTTP/1.1" 302 0
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11749
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/ HTTP/1.1" 200 5890
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9550
+INFO django.server "GET /api-auth/logout/?next=/api/paradigms/ HTTP/1.1" 302 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /api-auth/login/?next=/api/paradigms/ HTTP/1.1" 200 2715
+INFO django.server "POST /api-auth/login/ HTTP/1.1" 302 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9550
+INFO django.server "GET /api-auth/logout/?next=/api/paradigms/ HTTP/1.1" 302 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api-auth/login/?next=/api/paradigms/ HTTP/1.1" 200 2715
+INFO django.server "POST /api-auth/login/ HTTP/1.1" 302 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9550
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9550
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9550
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9550
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/ HTTP/1.1" 200 5890
+INFO django.server "GET /api/programmers/ HTTP/1.1" 200 10748
+INFO django.server "GET /api-auth/logout/?next=/api/programmers/ HTTP/1.1" 302 0
+INFO django.server "GET /api/programmers/ HTTP/1.1" 200 6364
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/settings.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/programmers/ HTTP/1.1" 200 10520
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/ HTTP/1.1" 200 5662
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9322
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9322
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api-auth/login/?next=/api/paradigms/ HTTP/1.1" 200 2715
+INFO django.server "POST /api-auth/login/ HTTP/1.1" 302 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9550
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/settings.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/settings.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/settings.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/ HTTP/1.1" 200 5662
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 6096
+INFO django.server "GET /api/ HTTP/1.1" 200 5662
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/ HTTP/1.1" 200 5662
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/ HTTP/1.1" 200 5662
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/ HTTP/1.1" 200 5662
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/ HTTP/1.1" 200 5662
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 7812
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 7812
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 7812
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING django.server "GET /api/token/refresh/ HTTP/1.1" 405 7631
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 7812
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 233
+WARNING django.server "GET /paradigms/ HTTP/1.1" 404 2795
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 233
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 7812
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 40
+WARNING django.server "POST /api/token/ HTTP/1.1" 400 79
+WARNING django.server "POST /api/token/ HTTP/1.1" 400 79
+INFO django.server "GET /api-auth/login/?next=/api/token/ HTTP/1.1" 200 2711
+INFO django.server "POST /api-auth/login/ HTTP/1.1" 302 0
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 7812
+WARNING django.server "POST /api/token/ HTTP/1.1" 400 79
+INFO django.server "GET /api-auth/login/?next=/api/token/ HTTP/1.1" 200 2711
+INFO django.server "POST /api-auth/login/ HTTP/1.1" 302 0
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 7812
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/settings.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 7812
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 7812
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api-auth/login/?next=/api/token/ HTTP/1.1" 200 2711
+INFO django.server "POST /api-auth/login/ HTTP/1.1" 302 0
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 7812
+WARNING django.server "POST /api/token/ HTTP/1.1" 400 79
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 40
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/settings.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 40
+WARNING django.server "POST /api/token/ HTTP/1.1" 400 79
+WARNING django.server "POST /api/token/ HTTP/1.1" 400 89
+INFO django.server "POST /api/token/ HTTP/1.1" 200 438
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 233
+WARNING django.server "GET /paradigms/ HTTP/1.1" 404 2795
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 233
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 233
+INFO django.server "GET /api-auth/login/?next=/api/token/ HTTP/1.1" 200 2711
+INFO django.server "POST /api-auth/login/ HTTP/1.1" 302 0
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 7812
+INFO django.server "POST /api/token/ HTTP/1.1" 200 438
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 233
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 233
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/settings.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 7812
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2798
+INFO django.server "GET /api-auth/login/?next=/api/token/ HTTP/1.1" 200 2711
+INFO django.server "POST /api-auth/login/ HTTP/1.1" 302 0
+WARNING django.server "GET /api/token/ HTTP/1.1" 405 7812
+INFO django.server "GET /api/ HTTP/1.1" 200 5890
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9550
+INFO django.server "GET /api/paradigms/2/ HTTP/1.1" 200 10489
+INFO django.server "GET /api/paradigms/2/ HTTP/1.1" 200 10489
+INFO django.server "PUT /api/paradigms/2/ HTTP/1.1" 200 10489
+INFO django.server "PUT /api/paradigms/2/ HTTP/1.1" 200 10492
+INFO django.server "PUT /api/paradigms/2/ HTTP/1.1" 200 10489
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9550
+INFO django.server "GET /api/ HTTP/1.1" 200 5890
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/settings.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/ HTTP/1.1" 200 5890
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/programmers/ HTTP/1.1" 200 10748
+INFO django.server "GET /api-auth/logout/?next=/api/programmers/ HTTP/1.1" 302 0
+WARNING django.server "GET /api/programmers/ HTTP/1.1" 403 5200
+WARNING django.server "GET /api/ HTTP/1.1" 403 4983
+INFO django.server "GET /api-auth/login/?next=/api/ HTTP/1.1" 200 2705
+INFO django.server "POST /api-auth/login/ HTTP/1.1" 302 0
+INFO django.server "GET /api/ HTTP/1.1" 200 5890
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11749
+INFO django.server "GET /api/paradigms/3/ HTTP/1.1" 200 10504
+INFO django.server "GET /api/paradigms/3/ HTTP/1.1" 200 10504
+INFO django.server "GET /api/paradigms/3/ HTTP/1.1" 200 10504
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9550
+INFO django.server "GET /api/ HTTP/1.1" 200 5890
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 11749
+INFO django.server "GET /api/paradigms/3/ HTTP/1.1" 200 10504
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/django_redis_celery/settings.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/admin.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /admin/ HTTP/1.1" 200 7713
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 200 8192
+INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO django.server "GET /admin/ HTTP/1.1" 200 7713
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+ERROR django.server "GET /admin/languages/programmer/ HTTP/1.1" 500 187757
+INFO django.server "GET /admin/ HTTP/1.1" 200 7713
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /admin/ HTTP/1.1" 200 7713
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+ERROR django.server "GET /admin/languages/programmer/ HTTP/1.1" 500 187759
+INFO django.server "GET /admin/ HTTP/1.1" 200 7713
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /admin/ HTTP/1.1" 200 7713
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO django.server "GET /admin/languages/language/ HTTP/1.1" 200 5471
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO django.server "GET /admin/ HTTP/1.1" 200 7713
+ERROR django.server "GET /admin/languages/programmer/ HTTP/1.1" 500 187757
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/migrations/0001_initial.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+ERROR django.server "GET /admin/languages/programmer/ HTTP/1.1" 500 187894
+INFO django.server "GET /admin/ HTTP/1.1" 200 7713
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /admin/ HTTP/1.1" 200 7713
+INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+ERROR django.server "GET /admin/languages/programmer/ HTTP/1.1" 500 187757
+INFO django.server "GET /admin/ HTTP/1.1" 200 7713
+INFO django.server "GET /admin/languages/language/ HTTP/1.1" 200 5471
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+ERROR django.server "POST /admin/languages/language/ HTTP/1.1" 500 204322
+INFO django.server "GET /admin/languages/language/ HTTP/1.1" 200 5471
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/migrations/0001_initial.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+ERROR django.server "POST /admin/languages/language/ HTTP/1.1" 500 204323
+INFO django.server "GET /admin/languages/language/ HTTP/1.1" 200 5471
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /admin/languages/language/ HTTP/1.1" 200 5471
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO django.server "GET /admin/ HTTP/1.1" 200 7713
+ERROR django.server "GET /admin/languages/programmer/ HTTP/1.1" 500 187757
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /admin/ HTTP/1.1" 302 0
+INFO django.server "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1819
+INFO django.server "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+WARNING django.server "GET /favicon.ico HTTP/1.1" 404 2798
+INFO django.server "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+INFO django.server "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO django.server "POST /admin/login/?next=/admin/ HTTP/1.1" 200 1980
+INFO django.server "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO django.server "GET /admin/ HTTP/1.1" 200 5784
+INFO django.server "GET /admin/languages/programmer/ HTTP/1.1" 200 3209
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/ HTTP/1.1" 200 5784
+INFO django.server "GET /admin/languages/language/ HTTP/1.1" 200 3195
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/ HTTP/1.1" 200 5784
+INFO django.server "GET /admin/languages/paradigm/ HTTP/1.1" 200 3195
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/ HTTP/1.1" 200 5784
+INFO django.server "GET /admin/languages/programmer/ HTTP/1.1" 200 3209
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/ HTTP/1.1" 200 5784
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 9126
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 9126
+INFO django.server "GET /api/ HTTP/1.1" 200 5890
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 8844
+INFO django.server "POST /api/paradigms/ HTTP/1.1" 201 9217
+INFO django.server "POST /api/paradigms/ HTTP/1.1" 201 9219
+INFO django.server "POST /api/paradigms/ HTTP/1.1" 201 9229
+INFO django.server "GET /api/paradigms/ HTTP/1.1" 200 9550
+INFO django.server "GET /api/ HTTP/1.1" 200 5890
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 9484
+INFO django.server "POST /api/languages/ HTTP/1.1" 201 9995
+INFO django.server "POST /api/languages/ HTTP/1.1" 201 9999
+INFO django.server "POST /api/languages/ HTTP/1.1" 201 10005
+INFO django.server "POST /api/languages/ HTTP/1.1" 201 10001
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 10994
+INFO django.server "GET /api/ HTTP/1.1" 200 5890
+INFO django.server "GET /api/programmers/ HTTP/1.1" 200 9591
+INFO django.server "POST /api/programmers/ HTTP/1.1" 201 10129
+INFO django.server "POST /api/programmers/ HTTP/1.1" 201 10273
+INFO django.server "POST /api/programmers/ HTTP/1.1" 201 10137
+INFO django.server "GET /api/programmers/ HTTP/1.1" 200 10946
+INFO django.server "GET /admin/ HTTP/1.1" 200 5784
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO django.server "GET /admin/languages/programmer/ HTTP/1.1" 200 4834
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/ HTTP/1.1" 200 5784
+INFO django.server "GET /admin/languages/paradigm/ HTTP/1.1" 200 4830
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/ HTTP/1.1" 200 5784
+INFO django.server "GET /admin/languages/language/ HTTP/1.1" 200 5028
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/ HTTP/1.1" 200 5784
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/models.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/admin.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /admin/ HTTP/1.1" 200 6240
+INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+ERROR django.server "GET /admin/languages/framework/ HTTP/1.1" 500 187712
+INFO django.server "GET /admin/ HTTP/1.1" 200 6240
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /admin/ HTTP/1.1" 200 6240
+INFO django.server "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO django.server "GET /admin/languages/framework/ HTTP/1.1" 200 3202
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /admin/languages/framework/add/ HTTP/1.1" 200 5262
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO django.server "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+INFO django.server "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+INFO django.server "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+INFO django.server "POST /admin/languages/framework/add/ HTTP/1.1" 302 0
+INFO django.server "GET /admin/languages/framework/ HTTP/1.1" 200 4564
+INFO django.server "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+INFO django.server "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO django.server "GET /api/ HTTP/1.1" 200 5890
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/urls.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/serializers.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.utils.autoreload /home/ilichota/PycharmProjects/dj/dj_redis_celery_1/languages/views.py changed, reloading.
+INFO django.utils.autoreload Watching for file changes with StatReloader
+INFO django.server "GET /api/ HTTP/1.1" 200 6036
+INFO django.server "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 304 0
+INFO django.server "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO django.server "GET /api/farmeworks/ HTTP/1.1" 200 9976
+INFO django.server "GET /api/ HTTP/1.1" 200 6036
+INFO django.server "GET /api/languages/ HTTP/1.1" 200 10994
+INFO django.server "POST /api/languages/ HTTP/1.1" 201 10001
+INFO django.server "GET /api/ HTTP/1.1" 200 6036
+INFO django.server "GET /api/farmeworks/ HTTP/1.1" 200 10088
+INFO django.server "POST /api/farmeworks/ HTTP/1.1" 201 10231
+INFO django.server "GET /api/farmeworks/ HTTP/1.1" 200 10471
+INFO django.server "GET /api/languages/5/ HTTP/1.1" 200 11311
+INFO django.server "POST /api/farmeworks/ HTTP/1.1" 201 10235
+INFO django.server "GET /api/farmeworks/ HTTP/1.1" 200 10856
