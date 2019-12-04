@@ -2,6 +2,9 @@ from django.db import models
 
 
 class Paradigm(models.Model):
+    """
+    Describes a programming paradigm.
+    """
     name = models.CharField(max_length=50)
 
     def __str__(self):
@@ -9,6 +12,9 @@ class Paradigm(models.Model):
 
 
 class Language(models.Model):
+    """
+    Describes a programming language.
+    """
     name = models.CharField(max_length=50)
     paradigm = models.ForeignKey(Paradigm,
                                  related_name='languages',
@@ -19,6 +25,9 @@ class Language(models.Model):
 
 
 class Framework(models.Model):
+    """
+    Describes a framework.
+    """
     name = models.CharField(max_length=50)
     languages = models.ForeignKey(Language,
                                   related_name='frameworks',
@@ -29,6 +38,9 @@ class Framework(models.Model):
 
 
 class Programmer(models.Model):
+    """
+    Describes a programmer.
+    """
     name = models.CharField(max_length=50)
     languages = models.ManyToManyField(Language,
                                        related_name='programmers')
