@@ -1,14 +1,14 @@
 from django.urls import path, include
 from . import views
-from rest_framework import routers
 
-
-router = routers.DefaultRouter()
-router.register('paradigms', views.ParadigmView)
-router.register('languages', views.LanguageView)
-router.register('programmers', views.ProgrammerView)
-router.register('frameworks', views.FrameworkView)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('paradigms/', views.ParadigmListView.as_view()),
+    path('languages/', views.LanguageListView.as_view()),
+    path('programmers/', views.ProgrammerListView.as_view()),
+    path('frameworks/', views.FrameworkListView.as_view()),
+    path('paradigms/<int:pk>/', views.ParadigmDetailView.as_view()),
+    path('languages/<int:pk>/', views.LanguageDetailView.as_view()),
+    path('programmers/<int:pk>/', views.ProgrammerDetailView.as_view()),
+    path('frameworks/<int:pk>/', views.FrameworkDetailView.as_view()),
 ]
