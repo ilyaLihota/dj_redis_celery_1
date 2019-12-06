@@ -1,7 +1,23 @@
 from rest_framework import generics, mixins
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework.reverse import reverse
 
 from .models import Paradigm, Language, Programmer, Framework
 from .serializers import ParadigmSerializer, LanguageSerializer, ProgrammerSerializer, FrameworkSerializer
+
+
+@api_view(['GET'])
+def api_root(request, format=None):
+    """
+    The entry point to our API.
+    """
+    return Response({
+        'paradigms': reverse('paradigm_list', request=request, format=format),
+        'languages': reverse('languages_list', request=request, format=format),
+        'programmers': reverse('programmers_list', request=request, format=format),
+        'frameworks': reverse('frameworks_list', request=request, format=format),
+    })
 
 
 class ParadigmListView(mixins.ListModelMixin,
