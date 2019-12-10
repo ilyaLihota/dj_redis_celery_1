@@ -1,7 +1,9 @@
-from rest_framework import generics, mixins, renderers
+from django.shortcuts import get_object_or_404
+from rest_framework import generics, mixins, renderers, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
+from rest_framework.views import APIView
 
 from .models import Paradigm, Language, Programmer, Framework
 from .serializers import ParadigmSerializer, LanguageSerializer, ProgrammerSerializer, FrameworkSerializer
@@ -20,145 +22,257 @@ def api_root(request, format=None):
     })
 
 
-class ParadigmListView(mixins.ListModelMixin,
-                       mixins.CreateModelMixin,
-                       generics.GenericAPIView):
+class ParadigmListView(APIView):
     """
-    Retrieve a list of paradigms or create a paradigm instance.
+    Retrieve a list of paradigms.
     """
-    queryset = Paradigm.objects.all()
-    serializer_class = ParadigmSerializer
+    def get(self, request):
+        # Get all paradigms from db.
+        paradigms = Paradigm.objects.all()
+        # Serialize paradigms to JSON.
+        serializer = ParadigmSerializer(paradigms,
+                                        many=True,
+                                        context={'request': request})
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
-    def get(self, request, *args, **kwargs):
-        return self.list(request, *args, **kwargs)
 
-    def post(self, request, *args, **kwargs):
-        return self.create(request, *args, **kwargs)
-
-
-class ParadigmDetailView(mixins.RetrieveModelMixin,
-                         mixins.UpdateModelMixin,
-                         mixins.DestroyModelMixin,
-                         generics.GenericAPIView):
+class ParadigmCreateView(APIView):
     """
-    Retrieve, update or delete a paradigm instance.
+    Create the paradigm instance.
     """
-    queryset = Paradigm.objects.all()
-    serializer_class = ParadigmSerializer
-
-    def get(self, request, *args, **kwargs):
-        return self.retrieve(request, *args, **kwargs)
-
-    def put(self, request, *args, **kwargs):
-        return self.update(request, *args, **kwargs)
-
-    def delete(self, request, *args, **kwargs):
-        return self.destroy(request, *args, **kwargs)
+    def post(self, request):
+        # Get data from request.
+        data = request.data
+        # Serialize data to JSON.
+        serializer = ParadigmSerializer(data=data, context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
-class LanguageListView(mixins.ListModelMixin,
-                       mixins.CreateModelMixin,
-                       generics.GenericAPIView):
+class ParadigmDetailView(APIView):
     """
-    Retrieve a list of languages or create a language instance.
+    Retrieve the paradigm instance.
     """
-    queryset = Language.objects.all()
-    serializer_class = LanguageSerializer
-
-    def get(self, request, *args, **kwargs):
-        return self.list(request, *args, **kwargs)
-
-    def post(self, request, *args, **kwargs):
-        return self.create(request, *args, **kwargs)
+    def get(self, request, pk):
+        # Get the paradigm from db.
+        paradigm = get_object_or_404(Paradigm, pk=pk)
+        serializer = ParadigmSerializer(paradigm,
+                                        context={'request': request})
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-class LanguageDetailView(mixins.RetrieveModelMixin,
-                         mixins.UpdateModelMixin,
-                         mixins.DestroyModelMixin,
-                         generics.GenericAPIView):
+class ParadigmUpdateView(APIView):
     """
-    Retrieve, update or delete a language instance.
+    Update the paradigm instance.
     """
-    queryset = Language.objects.all()
-    serializer_class = LanguageSerializer
+    def put(self, request, pk):
+        # Get the paradigm from db.
+        paradigm = get_object_or_404(Paradigm, pk=pk)
+        print('paradigm: {}'.format(paradigm))
+        # Get data from request.
+        data = request.data
+        serializer = ParadigmSerializer(paradigm,
+                                        data=data,
+                                        context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def get(self, request, *args, **kwargs):
-        return self.retrieve(request, *args, **kwargs)
 
-    def put(self, request, *args, **kwargs):
-        return self.update(request, *args, **kwargs)
-
-    def delete(self, request, *args, **kwargs):
-        return self.destroy(request, *args, **kwargs)
-
-
-class ProgrammerListView(mixins.ListModelMixin,
-                         mixins.CreateModelMixin,
-                         generics.GenericAPIView):
+class ParadigmDeleteView(APIView):
     """
-    Retrieve a list of programmers or create a programmer instance.
+    Delete the paradigm instance.
     """
-    queryset = Programmer.objects.all()
-    serializer_class = ProgrammerSerializer
-
-    def get(self, request, *args, **kwargs):
-        return self.list(request, *args, **kwargs)
-
-    def post(self, request, *args, **kwargs):
-        return self.create(request, *args, **kwargs)
+    def delete(self, request, pk):
+        # Get the paradigm from db.
+        paradigm = get_object_or_404(Paradigm, pk=pk)
+        paradigm.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class ProgrammerDetailView(mixins.RetrieveModelMixin,
-                           mixins.UpdateModelMixin,
-                           mixins.DestroyModelMixin,
-                           generics.GenericAPIView):
+class LanguageListView(APIView):
     """
-    Retrieve, update or delete a programmer instance.
+    Retrieve the list of languages.
     """
-    queryset = Programmer.objects.all()
-    serializer_class = ProgrammerSerializer
 
-    def get(self, request, *args, **kwargs):
-        return self.retrieve(request, *args, **kwargs)
-
-    def put(self, request, *args, **kwargs):
-        return self.update(request, *args, **kwargs)
-
-    def delete(self, request, *args, **kwargs):
-        return self.destroy(request, *args, **kwargs)
+    def get(self, request):
+        languages = Language.objects.all()
+        serializer = LanguageSerializer(languages,
+                                        many=True,
+                                        context={'request': request})
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
-class FrameworkListView(mixins.ListModelMixin,
-                        mixins.CreateModelMixin,
-                        generics.GenericAPIView):
+class LanguageCreateView(APIView):
     """
-    Retrieve a list of frameworks or create a framework instance.
+    Create the language instance.
     """
-    queryset = Framework.objects.all()
-    serializer_class = FrameworkSerializer
+    def post(self, request):
+        data = request.data
+        serializer = LanguageSerializer(data=data,
+                                        context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    def get(self, request, *args, **kwargs):
-        return self.list(request, *args, **kwargs)
 
-    def post(self, request, *args, **kwargs):
-        return self.create(request, *args, **kwargs)
-
-
-class FrameworkDetailView(mixins.RetrieveModelMixin,
-                          mixins.UpdateModelMixin,
-                          mixins.DestroyModelMixin,
-                          generics.GenericAPIView):
+class LanguageDetailView(APIView):
     """
-    Retrieve, update or delete a framework instance.
+    Retrieve the language instance.
     """
-    queryset = Framework.objects.all()
-    serializer_class = FrameworkSerializer
+    def get(self, request, pk):
+        language = get_object_or_404(Language, pk=pk)
+        serializer = LanguageSerializer(language,
+                                        context={'request': request})
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
-    def get(self, request, *args, **kwargs):
-        return self.retrieve(request, *args, **kwargs)
 
-    def put(self, request, *args, **kwargs):
-        return self.update(request, *args, **kwargs)
+class LanguageUpdateView(APIView):
+    """
+    Update the language instance.
+    """
+    def put(self, request, pk):
+        language = get_object_or_404(Language, pk=pk)
+        serializer = LanguageSerializer(language,
+                                        data=request.data,
+                                        context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def delete(self, request, *args, **kwargs):
-        return self.destroy(request, *args, **kwargs)
+
+class LanguageDeleteView(APIView):
+    """
+    Delete the language instance.
+    """
+    def delete(self, request, pk):
+        language = get_object_or_404(Language, pk=pk)
+        language.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class ProgrammerListView(APIView):
+    """
+    Retrieve the list of programmers.
+    """
+    def get(self, request):
+        programmers = Programmer.objects.all()
+        serializer = ProgrammerSerializer(programmers,
+                                          many=True,
+                                          context={'request': request})
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class ProgrammerCreateView(APIView):
+    """
+    Create the programmer instance.
+    """
+    def post(self, request):
+        data = request.data
+        serializer = ProgrammerSerializer(data=data, context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+class ProgrammerDetailView(APIView):
+    """
+    Retrieve the programmer instance.
+    """
+    def get(self, request, pk):
+        programmer = get_object_or_404(Programmer, pk=pk)
+        serializer = ProgrammerSerializer(programmer,
+                                          context={'request': request})
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class ProgrammerUpdateView(APIView):
+    """
+    Update the programmer instance.
+    """
+    def put(self, request, pk):
+        programmer = get_object_or_404(Programmer, pk=pk)
+        serializer = ProgrammerSerializer(programmer,
+                                          data=request.data,
+                                          context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class ProgrammerDeleteView(APIView):
+    """
+    Delete the programmer instance.
+    """
+    def delete(self, request, pk):
+        programmer = get_object_or_404(Programmer, pk=pk)
+        programmer.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class FrameworkListView(APIView):
+    """
+    Retrieve the list of frameworks.
+    """
+    def get(self, request):
+        frameworks = Framework.objects.all()
+        serializer = FrameworkSerializer(frameworks,
+                                         many=True,
+                                         context={'request': request})
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class FrameworkCreateView(APIView):
+    """
+    Create the framework instance.
+    """
+    def post(self, request):
+        data = request.data
+        serializer = FrameworkSerializer(data=data, context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+class FrameworkDetailView(APIView):
+    """
+    Retrieve the framework instance.
+    """
+    def get(self, request, pk):
+        framework = get_object_or_404(Framework, pk=pk)
+        serializer = FrameworkSerializer(framework,
+                                         context={'request': request})
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class FrameworkUpdateView(APIView):
+    """
+    Update the framework instance.
+    """
+    def put(self, request, pk):
+        framework = get_object_or_404(Framework, pk=pk)
+        serializer = FrameworkSerializer(framework,
+                                         data=request.data,
+                                         context={'request': request})
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class FrameworkDeleteView(APIView):
+    """
+    Delete the framework instance.
+    """
+    def delete(self, request, pk):
+        framework = get_object_or_404(Language, pk=pk)
+        framework.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
