@@ -1,83 +1,116 @@
 import json
-import requests
 
-from django.contrib.auth.models import User
+from django.test import TestCase, Client
 from django.urls import reverse
 from rest_framework import status
-from rest_framework.test import APIClient, APITestCase, APIRequestFactory, force_authenticate
+from rest_framework.test import APIClient, APITestCase,\
+                                APIRequestFactory, force_authenticate,\
+                                RequestsClient
 
-from django_redis_celery.settings import ALLOWED_HOSTS
 from ..models import Paradigm, Language, Programmer, Framework
 from ..serializers import ParadigmSerializer, LanguageSerializer,\
                           ProgrammerSerializer, FrameworkSerializer
 
 
-user = User.objects.get(username='Me')
-password = 'my_password'
+client = Client()
 factory = APIRequestFactory()
 
 
-class GetAllParadigmsTest(APITestCase):
+class GetAllParadigmsTest(TestCase):
     """
-    Testing the list of paradigms.
+    Test module for GET all paradigms API.
     """
     def setUp(self):
-        self.url = 'http://{}:8000{}'.format(ALLOWED_HOSTS[1], reverse('paradigm-list'))
+        Paradigm.objects.create(name='procedure')
 
-    def test_paradigm_list_GET(self):
-        response = requests.get(self.url,
-                                auth=(user, password))
+    def test_get_all_paradigms(self):
+        # Get API response.
+        response = client.get(reverse('paradigm-list'))
+        # Get data from db.
         paradigms = Paradigm.objects.all()
-        print(paradigms)
         serializer = ParadigmSerializer(paradigms, many=True)
-        self.assertEqual(response.json(), serializer.data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.json(), serializer.data)
 
 
-class GetSingleParadigmTest(APITestCase):
+class GetSingleParadigmTest(TestCase):
     """
-    Testing GET the single paradigm.
+    Test module for getting the existing paradigm.
     """
     def setUp(self):
-        self.object_oriented = Paradigm.objects.create(name='object_oriented')
-        self.url = reverse('paradigm-detail',
-                           args=[self.object_oriented.pk],)
-
-
+        self.paradigm = Paradigm.objects.create(name='my_paradigm')
 
     def test_get_valid_single_paradigm(self):
-        response = requests.get('http://{}:8000{}'.format(ALLOWED_HOSTS[1], self.url),
-                                auth=(user, password))
-        paradigm = Paradigm.objects.get(pk=self.object_oriented.pk)
-        request = factory.get(self.url)
-        serializer = ParadigmSerializer(paradigm,
-                                        context={'request': request})
-        self.assertEqual(response.text, serializer.data)
+        response = client.get(reverse('paradigm-detail',
+                                      args=[self.paradigm.pk]))
+        paradigm = Paradigm.objects.get(name='my_paradigm')
+        serializer = ParadigmSerializer(paradigm)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.json(), serializer.data)
 
     def test_get_invalid_single_paradigm(self):
-        response = requests.get('http://{}:8000{}'.format(ALLOWED_HOSTS[1], self.url),
-                                auth=(user, password))
+        response = client.get(reverse('paradigm-detail', args=[100, ]))
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
 
-class CreateNewParadigmTest(APITestCase):
+class CreateNewParadigmTest(TestCase):
     """
-    Testing POST the single paradigm.
+    Test module for inserting a new paradigm.
     """
     def setUp(self):
         self.valid_payload = {'name': 'functional', }
         self.invalid_payload = {'name': '', }
-        self.url = 'http://{}:8000{}'.format(ALLOWED_HOSTS[1], reverse('paradigm-create'))
 
-    def test_create_valid_payload(self):
-        response = requests.post(self.url,
-                                 data=self.valid_payload,
-                                 auth=(user, password))
+    def test_create_valid_paradigm(self):
+        response = client.post(reverse('paradigm-create'),
+                               data=json.dumps(self.valid_payload),
+                               content_type='application/json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
-    def test_create_invalid_payload(self):
-        response = requests.post(self.url,
-                                 data=self.invalid_payload,
-                                 auth=(user, password))
+    def test_create_invalid_paradigm(self):
+        response = client.post(reverse('paradigm-create'),
+                               data=json.dumps(self.invalid_payload),
+                               content_type='application/json')
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+
+class UpdateSingleParadigmTest(TestCase):
+    """
+    Test module for updating the existing paradigm.
+    """
+    def setUp(self):
+        self.functional = Paradigm.objects.create(name='functional')
+        self.procedure = Paradigm.objects.create(name='procedure')
+        self.valid_payload = {'name': 'functional', }
+        self.invalid_payload = {'name': '', }
+
+    def test_valid_update_paradigm(self):
+        response = client.put(reverse('paradigm-update', args=[self.functional.pk]),
+                              data=json.dumps(self.valid_payload),
+                              content_type='application/json')
+        functional_paradigm = Paradigm.objects.get(name='functional')
+        serializer = ParadigmSerializer(functional_paradigm)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.json(), serializer.data)
+
+    def test_invalid_update_paradigm(self):
+        response = client.put(reverse('paradigm-update', args=[self.procedure.pk]),
+                              data=json.dumps(self.invalid_payload),
+                              content_type='application/json')
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+
+class DeleteSingleParadigmTest(TestCase):
+    """
+    Test module for deleting the existing paradigm.
+    """
+    def setUp(self):
+        self.paradigm = Paradigm.objects.create(name='metaprogramming')
+
+    def test_valid_delete_single_paradigm(self):
+        response = client.delete(reverse('paradigm-delete', args=[self.paradigm.pk]))
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+
+    def test_invalid_delete_single_paradigm(self):
+        response = client.delete(reverse('paradigm-delete', args=[1000, ]))
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)

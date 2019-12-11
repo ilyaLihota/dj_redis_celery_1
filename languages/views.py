@@ -32,7 +32,8 @@ class ParadigmListView(APIView):
         # Serialize paradigms to JSON.
         serializer = ParadigmSerializer(paradigms,
                                         many=True,
-                                        context={'request': request})
+                                        # context={'request': request}
+                                        )
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -44,11 +45,13 @@ class ParadigmCreateView(APIView):
         # Get data from request.
         data = request.data
         # Serialize data to JSON.
-        serializer = ParadigmSerializer(data=data, context={'request': request})
+        serializer = ParadigmSerializer(data=data,
+                                        # context={'request': request}
+                                        )
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class ParadigmDetailView(APIView):
@@ -59,7 +62,8 @@ class ParadigmDetailView(APIView):
         # Get the paradigm from db.
         paradigm = get_object_or_404(Paradigm, pk=pk)
         serializer = ParadigmSerializer(paradigm,
-                                        context={'request': request})
+                                        # context={'request': request}
+                                        )
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -75,7 +79,8 @@ class ParadigmUpdateView(APIView):
         data = request.data
         serializer = ParadigmSerializer(paradigm,
                                         data=data,
-                                        context={'request': request})
+                                        # context={'request': request}
+                                        )
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -102,7 +107,8 @@ class LanguageListView(APIView):
         languages = Language.objects.all()
         serializer = LanguageSerializer(languages,
                                         many=True,
-                                        context={'request': request})
+                                        # context={'request': request}
+                                        )
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -113,11 +119,12 @@ class LanguageCreateView(APIView):
     def post(self, request):
         data = request.data
         serializer = LanguageSerializer(data=data,
-                                        context={'request': request})
+                                        # context={'request': request}
+                                        )
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class LanguageDetailView(APIView):
@@ -127,7 +134,8 @@ class LanguageDetailView(APIView):
     def get(self, request, pk):
         language = get_object_or_404(Language, pk=pk)
         serializer = LanguageSerializer(language,
-                                        context={'request': request})
+                                        # context={'request': request}
+                                        )
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -139,7 +147,8 @@ class LanguageUpdateView(APIView):
         language = get_object_or_404(Language, pk=pk)
         serializer = LanguageSerializer(language,
                                         data=request.data,
-                                        context={'request': request})
+                                        # context={'request': request}
+                                        )
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -164,7 +173,8 @@ class ProgrammerListView(APIView):
         programmers = Programmer.objects.all()
         serializer = ProgrammerSerializer(programmers,
                                           many=True,
-                                          context={'request': request})
+                                          # context={'request': request}
+                                          )
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -174,11 +184,13 @@ class ProgrammerCreateView(APIView):
     """
     def post(self, request):
         data = request.data
-        serializer = ProgrammerSerializer(data=data, context={'request': request})
+        serializer = ProgrammerSerializer(data=data,
+                                          # context={'request': request}
+                                          )
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class ProgrammerDetailView(APIView):
@@ -188,7 +200,8 @@ class ProgrammerDetailView(APIView):
     def get(self, request, pk):
         programmer = get_object_or_404(Programmer, pk=pk)
         serializer = ProgrammerSerializer(programmer,
-                                          context={'request': request})
+                                          # context={'request': request}
+                                          )
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -200,7 +213,8 @@ class ProgrammerUpdateView(APIView):
         programmer = get_object_or_404(Programmer, pk=pk)
         serializer = ProgrammerSerializer(programmer,
                                           data=request.data,
-                                          context={'request': request})
+                                          # context={'request': request}
+                                          )
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -225,7 +239,8 @@ class FrameworkListView(APIView):
         frameworks = Framework.objects.all()
         serializer = FrameworkSerializer(frameworks,
                                          many=True,
-                                         context={'request': request})
+                                         # context={'request': request}
+                                         )
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -235,11 +250,13 @@ class FrameworkCreateView(APIView):
     """
     def post(self, request):
         data = request.data
-        serializer = FrameworkSerializer(data=data, context={'request': request})
+        serializer = FrameworkSerializer(data=data,
+                                         # context={'request': request}
+                                         )
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 class FrameworkDetailView(APIView):
@@ -249,7 +266,8 @@ class FrameworkDetailView(APIView):
     def get(self, request, pk):
         framework = get_object_or_404(Framework, pk=pk)
         serializer = FrameworkSerializer(framework,
-                                         context={'request': request})
+                                         # context={'request': request}
+                                         )
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -261,7 +279,8 @@ class FrameworkUpdateView(APIView):
         framework = get_object_or_404(Framework, pk=pk)
         serializer = FrameworkSerializer(framework,
                                          data=request.data,
-                                         context={'request': request})
+                                         # context={'request': request}
+                                         )
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
