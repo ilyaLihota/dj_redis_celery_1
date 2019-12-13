@@ -1,6 +1,4 @@
-import json
 import pytest
-import requests
 
 from django.test import TestCase, Client
 from django.urls import reverse
@@ -32,8 +30,9 @@ class GetAllParadigmsTest(TestCase):
         # Get data from db.
         paradigms = Paradigm.objects.all()
         serializer = ParadigmSerializer(paradigms, many=True)
+
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.json(), serializer.data)
+        self.assertEqual(response.data, serializer.data)
 
 
 class GetSingleParadigmTest(TestCase):
@@ -84,8 +83,9 @@ class CreateSingleParadigmTest(TestCase):
         Test case for creating the valid paradigm.
         """
         response = self.client.post(reverse('paradigm-create'),
-                                    data=json.dumps(self.valid_payload),
+                                    data=self.valid_payload,
                                     content_type='application/json')
+
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_create_invalid_single_paradigm(self):
@@ -93,58 +93,75 @@ class CreateSingleParadigmTest(TestCase):
         Test case for creating the invalid paradigm.
         """
         response = self.client.post(reverse('paradigm-create'),
-                                    data=json.dumps(self.invalid_payload),
+                                    data=self.invalid_payload,
                                     content_type='application/json')
+
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
 
 class UpdateSingleParadigmTest(TestCase):
     """
-    Test module for updating the existing paradigm.
+    Test module for updating the single paradigm.
     """
     def setUp(self):
-        self.functional = Paradigm.objects.create(name='functional')
-        self.procedure = Paradigm.objects.create(name='procedure')
-        self.valid_payload = {'name': 'functional', }
+        self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
+
+        self.valid_payload = {'name': 'updated_paradigm', }
         self.invalid_payload = {'name': '', }
 
-    def test_update_valid_single_paradigm(self):
+        self.valid_update_url = reverse('paradigm-update',
+                                        kwargs={'pk': self.test_paradigm.pk})
+        self.invalid_update_url = reverse('paradigm-update',
+                                          kwargs={'pk': 2000})
+        self.content_type = 'application/json'
+
+    def test_update_valid_single_paradigm_valid_payload(self):
         """
         Test case for a valid updating paradigm.
         """
-        response = self.client.put(reverse('paradigm-update',
-                                           kwargs={'pk': self.functional.pk}),
-                                   data=json.dumps(self.valid_payload),
+        response = self.client.put(self.valid_update_url,
+                                   data=self.valid_payload,
                                    content_type='application/json')
-        functional_paradigm = Paradigm.objects.get(name='functional')
-        serializer = ParadigmSerializer(functional_paradigm)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.json(), serializer.data)
+        test_paradigm = Paradigm.objects.get(pk=response.data['id'])
+        serializer = ParadigmSerializer(test_paradigm)
 
-    def test_update_invalid_single_paradigm(self):
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data, serializer.data)
+
+    def test_update_invalid_single_paradigm_valid_payload(self):
         """
         Test case for an invalid updating paradigm.
         """
-        response = self.client.put(reverse('paradigm-update',
-                                           kwargs={'pk': self.procedure.pk}),
-                                   data=json.dumps(self.invalid_payload),
-                                   content_type='application/json')
+        response = self.client.put(self.invalid_update_url,
+                                   data=self.valid_payload,
+                                   content_type=self.content_type)
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+    def test_update_valid_single_paradigm_invalid_payload(self):
+        """
+        Test case for an invalid updating paradigm.
+        """
+        response = self.client.put(self.valid_update_url,
+                                   data=self.invalid_payload,
+                                   content_type=self.content_type)
+
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
 
 class DeleteSingleParadigmTest(TestCase):
     """
-    Test module for deleting the existing paradigm.
+    Test module for deleting the single paradigm.
     """
     def setUp(self):
         self.paradigm = Paradigm.objects.create(name='metaprogramming')
 
     def test_delete_valid_single_paradigm(self):
         """
-        Test case for deleting the existing paradigm.
+        Test case for deleting the single paradigm.
         """
         response = self.client.delete(reverse('paradigm-delete',
                                               kwargs={'pk': self.paradigm.pk}))
+
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
     def test_delete_invalid_single_paradigm(self):
@@ -153,7 +170,40 @@ class DeleteSingleParadigmTest(TestCase):
         """
         response = self.client.delete(reverse('paradigm-delete',
                                               kwargs={'pk': 1000}))
+
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+
+class GetAllLanguagesTest(TestCase):
+    """
+    Test module for getting all languages.
+    """
+    def setUp(self):
+        self.test_paradigm1 = Paradigm.objects.create(name='functional')
+        self.test_paradigm2 = Paradigm.objects.create(name='procedure')
+        self.test_paradigm3 = Paradigm.objects.create(name='object_oriented')
+
+        self.test_language1 = Language.objects.create(name='Scala')
+        self.test_language1.paradigm.set([self.test_paradigm1])
+        self.test_language2 = Language.objects.create(name='Python')
+        self.test_language2.paradigm.set([self.test_paradigm2])
+        self.test_language3 = Language.objects.create(name='Java')
+        self.test_language3.paradigm.set([self.test_paradigm3])
+
+        self.list_url = reverse('language-list')
+
+    def test_get_all_paradigms(self):
+        """
+        Test case for getting list of existing languages.
+        """
+        # Get API response.
+        response = self.client.get(self.list_url)
+        # Get data from db.
+        languages = Language.objects.all()
+        serializer = LanguageSerializer(languages, many=True)
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data, serializer.data)
 
 
 class GetSingleLanguageTest(TestCase):
@@ -174,7 +224,7 @@ class GetSingleLanguageTest(TestCase):
 
     def test_get_valid_single_language(self):
         """
-        Test case for getting the existing paradigm.
+        Test case for getting the single paradigm.
         """
         # Get a language instance with GET.
         response = self.client.get(self.valid_detail_url)
@@ -218,7 +268,7 @@ class CreateSingleLanguageTest(TestCase):
         serializer = LanguageSerializer(test_language)
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-        self.assertEqual(response.json(), serializer.data)
+        self.assertEqual(response.data, serializer.data)
 
     def test_post_invalid_single_language(self):
         """
@@ -256,7 +306,7 @@ class UpdateSingleLanguageTest(TestCase):
 
     def test_update_valid_single_language_valid_payload(self):
         response = self.client.put(self.valid_update_url,
-                                   data=json.dumps(self.valid_payload),
+                                   data=self.valid_payload,
                                    content_type=self.content_type)
         test_language = Language.objects.get(pk=self.test_language.pk)
         serializer = LanguageSerializer(test_language)
@@ -319,10 +369,10 @@ class GetAllProgrammersTest(TestCase):
         self.test_programmer2 = Programmer.objects.create(name='test_programmer2')
         self.test_programmer2.languages.add(self.test_language)
 
-        self.valid_list_url = reverse('programmer-list')
+        self.list_url = reverse('programmer-list')
 
     def test_get_all_programmers(self):
-        response = self.client.get(self.valid_list_url)
+        response = self.client.get(self.list_url)
         programmers = Programmer.objects.all()
         serializer = ProgrammerSerializer(programmers, many=True)
 
@@ -420,7 +470,7 @@ class UpdateSingleProgrammerTest(TestCase):
 
     def test_update_valid_single_programmer_valid_payload(self):
         response = self.client.put(self.valid_update_url,
-                                   data=json.dumps(self.valid_payload),
+                                   data=self.valid_payload,
                                    content_type=self.content_type)
         test_programmer = Programmer.objects.get(pk=response.data['id'])
         serializer = ProgrammerSerializer(test_programmer)
@@ -445,7 +495,7 @@ class UpdateSingleProgrammerTest(TestCase):
 
 class DeleteSingleProgrammerTest(TestCase):
     """
-    Test module for deleting the existing programmer.
+    Test module for deleting the single programmer.
     """
     def setUp(self):
         # Create a test paradigm which we will refer.
@@ -462,12 +512,189 @@ class DeleteSingleProgrammerTest(TestCase):
         self.invalid_delete_url = reverse('programmer-delete',
                                           kwargs={'pk': 2000})
 
-    def test_valid_delete_single_programmer(self):
+    def test_delete_valid_single_programmer(self):
         response = self.client.delete(self.valid_delete_url)
 
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
-    def test_invalid_delete_single_programmer(self):
+    def test_delete_invalid_single_programmer(self):
+        response = self.client.delete(self.invalid_delete_url)
+
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+
+class GetAllFrameworks(TestCase):
+    """
+    Test module for getting all frameworks.
+    """
+    def setUp(self):
+        # Create a test paradigm which we will refer.
+        self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
+        # Create a test language.
+        self.test_language = Language.objects.create(name='test_language')
+        self.test_language.paradigm.add(self.test_paradigm)
+        # Create a test framework.
+        self.test_framework1 = Framework.objects.create(name='test_framework1',
+                                                        languages=self.test_language)
+        self.test_framework2 = Framework.objects.create(name='test_framework2',
+                                                        languages=self.test_language)
+        self.test_framework3 = Framework.objects.create(name='test_framework3',
+                                                        languages=self.test_language)
+
+        self.list_url = reverse('framework-list')
+
+    def test_get_all_frameworks(self):
+        response = self.client.get(self.list_url)
+        test_frameworks = Framework.objects.all()
+        serializer = FrameworkSerializer(test_frameworks, many=True)
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data, serializer.data)
+
+
+class GetSingleFrameworkTest(TestCase):
+    """
+    Test module for getting the single framework.
+    """
+    def setUp(self):
+        # Create a test paradigm which we will refer.
+        self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
+        # Create a test language.
+        self.test_language = Language.objects.create(name='test_language')
+        self.test_language.paradigm.add(self.test_paradigm)
+        # Create a test framework.
+        self.test_framework = Framework.objects.create(name='test_framework',
+                                                       languages=self.test_language)
+
+        self.valid_detail_url = reverse('framework-detail',
+                                        kwargs={'pk': self.test_framework.pk})
+        self.invalid_detail_url = reverse('framework-detail',
+                                          kwargs={'pk': 2000})
+
+    def test_get_valid_single_framework(self):
+        response = self.client.get(self.valid_detail_url)
+        test_framework = Framework.objects.get(pk=response.data['id'])
+        serializer = FrameworkSerializer(test_framework)
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data, serializer.data)
+
+    def test_get_invalid_single_framework(self):
+        response = self.client.get(self.invalid_detail_url)
+
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+
+class CreateSingleFrameworkTest(TestCase):
+    """
+    Test module for creating the single framework.
+    """
+    def setUp(self):
+        # Create a test paradigm which we will refer.
+        self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
+        # Create a test language.
+        self.test_language = Language.objects.create(name='test_language')
+        self.test_language.paradigm.add(self.test_paradigm)
+
+        self.valid_payload = {'name': 'test_framework',
+                              'languages': self.test_language.pk}
+        self.invalid_payload = {'name': ''}
+
+        self.create_url = reverse('framework-create')
+        self.content_type = 'application/json'
+
+    def test_create_valid_single_framework(self):
+        response = self.client.post(self.create_url,
+                                    data=self.valid_payload,
+                                    content_type=self.content_type)
+        test_farmework = Framework.objects.get(pk=response.data['id'])
+        serializer = FrameworkSerializer(test_farmework)
+
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(response.data, serializer.data)
+
+    def test_create_invalid_single_framework(self):
+        response = self.client.post(self.create_url,
+                                    data=self.invalid_payload,
+                                    content_type=self.content_type)
+
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+
+class UpdateSingleFrameworkTest(TestCase):
+    """
+    Test module for updating the single framework.
+    """
+    def setUp(self):
+        # Create a test paradigm which we will refer.
+        self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
+        # Create a test language.
+        self.test_language = Language.objects.create(name='test_language')
+        self.test_language.paradigm.add(self.test_paradigm)
+
+        self.test_framework = Framework.objects.create(name='test_framework',
+                                                       languages=self.test_language)
+
+        self.valid_payload = {'name': 'updated_framework',
+                              'languages': self.test_language.pk}
+        self.invalid_payload = {'name': ''}
+
+        self.valid_update_url = reverse('framework-update',
+                                        kwargs={'pk': self.test_framework.pk})
+        self.invalid_update_url = reverse('framework-update',
+                                          kwargs={'pk': 2000})
+        self.content_type = 'application/json'
+
+    def test_update_valid_single_framework_valid_payload(self):
+        response = self.client.put(self.valid_update_url,
+                                   data=self.valid_payload,
+                                   content_type=self.content_type)
+        test_framework = Framework.objects.get(pk=response.data['id'])
+        serializer = FrameworkSerializer(test_framework)
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data, serializer.data)
+
+    def test_update_invalid_single_framework_valid_payload(self):
+        response = self.client.put(self.invalid_update_url,
+                                   data=self.valid_payload,
+                                   content_type=self.content_type)
+
+        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+    def test_update_valid_single_framework_invalid_payload(self):
+        response = self.client.put(self.valid_update_url,
+                                   data=self.invalid_payload,
+                                   content_type=self.content_type)
+
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+
+class DeleteSingleFrameworkTest(TestCase):
+    """
+    Test module for deleting the single framework.
+    """
+    def setUp(self):
+        # Create a test paradigm which we will refer.
+        self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
+        # Create a test language.
+        self.test_language = Language.objects.create(name='test_language')
+        self.test_language.paradigm.add(self.test_paradigm)
+
+        self.test_framework = Framework.objects.create(name='test_framework',
+                                                       languages=self.test_language)
+
+        self.valid_delete_url = reverse('framework-delete',
+                                        kwargs={'pk': self.test_framework.pk})
+        self.invalid_delete_url = reverse('framework-delete',
+                                          kwargs={'pk': 2000})
+
+    def test_delete_valid_single_framework(self):
+        response = self.client.delete(self.valid_delete_url)
+
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+
+    def test_delete_invalid_single_paradigm(self):
         response = self.client.delete(self.invalid_delete_url)
 
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
