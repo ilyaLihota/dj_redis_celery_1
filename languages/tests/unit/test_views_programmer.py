@@ -4,8 +4,8 @@ from django.test import TestCase, Client
 from django.urls import reverse
 from rest_framework import status
 
-from ..models import Paradigm, Language, Programmer, Framework
-from ..serializers import ParadigmSerializer, LanguageSerializer,\
+from languages.models import Paradigm, Language, Programmer, Framework
+from languages.serializers import ParadigmSerializer, LanguageSerializer,\
                           ProgrammerSerializer, FrameworkSerializer
 
 
