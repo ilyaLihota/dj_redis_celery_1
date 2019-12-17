@@ -2,7 +2,7 @@ from django.test import TestCase, Client
 from django.urls import reverse
 
 from languages.models import Language, Paradigm, Programmer, Framework,\
-    the_most_popular_language
+    most_popular_language
 
 
 class ChangesInParadigmUpdatedInLanguageTest(TestCase):
@@ -46,18 +46,10 @@ class ChangesInLanguageUpdatedInFrameworkTest(TestCase):
                         'paradigm': self.test_paradigm}
         self.valid_update_url = reverse('language-update',
                                         kwargs={'pk': self.test_language.pk})
-        self.invalid_update_url = reverse('language-update',
-                                          kwargs={'pk': 2000})
 
     def test_changes_in_language_updated_in_framework(self):
         # Change the test_language with the put-method.
         self.client.put(self.valid_update_url,
-                        data=self.payload)
-
-        self.assertEqual(self.test_language, self.test_framework.languages)
-
-    def test_invalid_changes_in_language_not_updated_in_framework(self):
-        self.client.put(self.invalid_update_url,
                         data=self.payload)
 
         self.assertEqual(self.test_language, self.test_framework.languages)
@@ -140,7 +132,7 @@ class NumberAndListOfLanguagesUpdatedWhenChangesTest(TestCase):
         self.client.delete(reverse('language-delete',
                                    kwargs={'pk': self.test_language1.pk}))
 
-        self.assertEqual(self.test_paradigm.number_of_languages_which_support_this_paradigm, 4)
+        self.assertEqual(self.test_paradigm.number_languages_support_paradigm, 4)
 
     def test_check_list_of_languages_if_their_amount_changed(self):
         self.client.delete(reverse('language-delete',
@@ -152,14 +144,14 @@ class NumberAndListOfLanguagesUpdatedWhenChangesTest(TestCase):
         del list_of_languages_after_remove[0]
         del list_of_languages_after_remove[2]
 
-        self.assertEqual(self.test_paradigm.list_of_languages_which_support_this_paradigm,
+        self.assertEqual(self.test_paradigm.list_languages_support_paradigm,
                          list_of_languages_after_remove)
 
 
 class NumberAndListOfProgrammersUpdatedWhenChangesTest(TestCase):
     """
     Integration test module for checking the number and list of the programmers
-    who know this language is updated when their amount was changed.
+    who know this language is updated when amount of programmers was changed.
     """
     def setUp(self):
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
@@ -179,16 +171,16 @@ class NumberAndListOfProgrammersUpdatedWhenChangesTest(TestCase):
     def test_check_number_of_programmers_if_their_amount_changed(self):
         self.client.delete(self.delete_url)
 
-        self.assertEqual(self.test_language.number_of_programmers_who_know_this_language, 2)
+        self.assertEqual(self.test_language.number_programmers_know_language, 2)
 
     def test_check_list_of_programmers_if_their_amount_changed(self):
         self.client.delete(self.delete_url)
 
-        list_of_programmers_after_remove = [self.test_programmer1,
-                                            self.test_programmer3]
+        list_programmers_changed = [self.test_programmer1,
+                                    self.test_programmer3]
 
-        self.assertEqual(self.test_language.list_of_programmers_who_know_this_language,
-                         list_of_programmers_after_remove)
+        self.assertEqual(self.test_language.list_programmers_know_language,
+                         list_programmers_changed)
 
 
 class NumberAndListOfFrameworksUpdatedWhenChangesTest(TestCase):
@@ -223,21 +215,21 @@ class NumberAndListOfFrameworksUpdatedWhenChangesTest(TestCase):
     def test_check_number_of_frameworks_if_their_amount_changed(self):
         self.client.delete(self.delete_url)
 
-        self.assertEqual(self.test_language.number_of_frameworks, 2)
+        self.assertEqual(self.test_language.number_frameworks, 2)
 
     def test_check_list_of_frameworks_if_their_amount_changed(self):
         self.client.delete(self.delete_url)
 
-        list_of_frameworks_after_remove = [self.test_framework1,
-                                           self.test_framework3]
+        list_frameworks_changed = [self.test_framework1,
+                                   self.test_framework3]
 
-        self.assertEqual(self.test_language.list_of_frameworks,
-                         list_of_frameworks_after_remove)
+        self.assertEqual(self.test_language.list_frameworks,
+                         list_frameworks_changed)
 
     def test_check_the_most_popular_framework_if_amount_of_programmers_changed(self):
         self.test_programmer2.frameworks.set([self.test_framework2])
 
-        self.assertEqual(self.test_language.the_most_popular_framework,
+        self.assertEqual(self.test_language.most_popular_framework,
                          self.test_framework2)
 
 
@@ -264,15 +256,15 @@ class NumberAndListOfProgrammersWhoKnowFrameworkChangesTest(TestCase):
     def test_number_of_programmers_who_know_this_framework(self):
         self.client.delete(self.delete_url)
 
-        self.assertEqual(self.test_framework.number_of_programmers_who_know_this_framework, 2)
+        self.assertEqual(self.test_framework.number_programmers_know_framework, 2)
 
     def test_list_of_programmers_who_know_this_framework(self):
         self.client.delete(self.delete_url)
-        list_of_programmers_after_remove = [self.test_programmer1,
-                                            self.test_programmer3]
+        list_programmers_changed = [self.test_programmer1,
+                                    self.test_programmer3]
 
-        self.assertEqual(self.test_framework.list_of_programmers_who_know_this_framework,
-                         list_of_programmers_after_remove)
+        self.assertEqual(self.test_framework.list_programmers_know_framework,
+                         list_programmers_changed)
 
 
 class TheMostPopularLanguageChangesTest(TestCase):
@@ -302,4 +294,4 @@ class TheMostPopularLanguageChangesTest(TestCase):
         self.client.delete(reverse('programmer-delete',
                                    kwargs={'pk': self.test_programmer3.pk}))
 
-        self.assertEqual(the_most_popular_language(), self.test_language1)
+        self.assertEqual(most_popular_language(), self.test_language1)

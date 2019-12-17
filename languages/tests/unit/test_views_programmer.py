@@ -4,9 +4,8 @@ from django.test import TestCase, Client
 from django.urls import reverse
 from rest_framework import status
 
-from languages.models import Paradigm, Language, Programmer, Framework
-from languages.serializers import ParadigmSerializer, LanguageSerializer,\
-                          ProgrammerSerializer, FrameworkSerializer
+from languages.models import Paradigm, Language, Programmer
+from languages.serializers import ProgrammerSerializer
 
 
 pytestmark = pytest.mark.django_db

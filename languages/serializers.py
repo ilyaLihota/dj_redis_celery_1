@@ -18,7 +18,7 @@ class LanguageSerializer(serializers.ModelSerializer):
 class ProgrammerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Programmer
-        fields = ['id', 'name', 'languages']
+        fields = ['id', 'name', 'likes', 'languages']
 
 
 class FrameworkSerializer(serializers.ModelSerializer):

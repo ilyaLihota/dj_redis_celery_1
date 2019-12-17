@@ -8,11 +8,11 @@ class Paradigm(models.Model):
     name = models.CharField(max_length=50)
 
     @property
-    def number_of_languages_which_support_this_paradigm(self):
+    def number_languages_support_paradigm(self):
         return self.languages.count()
 
     @property
-    def list_of_languages_which_support_this_paradigm(self):
+    def list_languages_support_paradigm(self):
         return list(self.languages.all())
 
     class Meta:
@@ -31,28 +31,28 @@ class Language(models.Model):
                                       related_name='languages')
 
     @property
-    def number_of_programmers_who_know_this_language(self):
+    def number_programmers_know_language(self):
         return self.programmers.count()
 
     @property
-    def list_of_programmers_who_know_this_language(self):
+    def list_programmers_know_language(self):
         return list(self.programmers.all())
 
     @property
-    def number_of_frameworks(self):
+    def number_frameworks(self):
         return self.frameworks.count()
 
     @property
-    def list_of_frameworks(self):
+    def list_frameworks(self):
         return list(self.frameworks.all())
 
     @property
-    def the_most_popular_framework(self):
-        number_of_programmers = 0
+    def most_popular_framework(self):
+        number_programmers = 0
         popular_framework = None
-        for framework in self.list_of_frameworks:
-            if framework.number_of_programmers_who_knows_this_framework > number_of_programmers:
-                number_of_programmers = framework.number_of_programmers_who_knows_this_framework
+        for framework in self.list_frameworks:
+            if framework.number_programmers_know_framework > number_programmers:
+                number_programmers = framework.number_programmers_know_framework
                 popular_framework = framework
         return popular_framework
 
@@ -73,11 +73,11 @@ class Framework(models.Model):
                                   on_delete=models.CASCADE)
 
     @property
-    def number_of_programmers_who_knows_this_framework(self):
+    def number_programmers_know_framework(self):
         return self.programmers.count()
 
     @property
-    def list_of_programmers_who_know_this_framework(self):
+    def list_programmers_know_framework(self):
         return list(self.programmers.all())
 
     class Meta:
@@ -92,6 +92,7 @@ class Programmer(models.Model):
     Describes a programmer.
     """
     name = models.CharField(max_length=50)
+    likes = models.PositiveIntegerField(null=True)
     languages = models.ManyToManyField(Language,
                                        related_name='programmers')
     frameworks = models.ManyToManyField(Framework,
@@ -104,20 +105,17 @@ class Programmer(models.Model):
         return self.name
 
 
-def the_most_popular_language():
+def most_popular_language():
     """
     Returns the most popular language from existing.
     """
-    paradigms = Paradigm.objects.all()
-    number_of_programmers = 0
+    languages = Language.objects.all()
+    number_programmers = 0
     popular_language = None
 
-    for paradigm in paradigms:
-        languages = paradigm.list_of_languages_which_support_this_paradigm
-
-        for language in languages:
-            if language.number_of_programmers_who_know_this_language > number_of_programmers:
-                number_of_programmers = language.number_of_programmers_who_know_this_language
-                popular_language = language
+    for language in languages:
+        if language.number_programmers_know_language > number_programmers:
+            number_programmers = language.number_programmers_know_language
+            popular_language = language
 
     return popular_language

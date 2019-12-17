@@ -209,6 +209,24 @@ class ProgrammerDeleteView(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
+class ProgrammerLikeView(APIView):
+    """
+    Add like to the programming rating.
+    """
+    def put(self, request, pk):
+        programmer = get_object_or_404(Programmer, pk=pk)
+
+        if programmer.likes is not None:
+            request.data['likes'] += programmer.likes
+
+        serializer = ProgrammerSerializer(programmer,
+                                          data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
 class FrameworkListView(APIView):
     """
     Retrieve the list of frameworks.
