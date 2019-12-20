@@ -3,7 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.api_root),
+    path('api/v1/', views.api_root),
 
     path('api/v1/paradigms/', views.ParadigmListView.as_view(), name='paradigm-list'),
     path('api/v1/paradigms/<int:pk>/', views.ParadigmDetailView.as_view(), name='paradigm-detail'),

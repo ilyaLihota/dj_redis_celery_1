@@ -1,5 +1,11 @@
 from django.db import models
 
+from django.conf import settings
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
+from rest_framework.reverse import reverse
+
 
 class Paradigm(models.Model):
     """
@@ -20,6 +26,11 @@ class Paradigm(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_api_url(self, request=None):
+        return reverse('paradigm-detail',
+                       kwargs={'pk': self.pk},
+                       request=request)
 
 
 class Language(models.Model):
@@ -62,6 +73,13 @@ class Language(models.Model):
     def __str__(self):
         return self.name
 
+    def get_api_url(self, request=None):
+        return reverse('language-detail', kwargs={'pk': self.pk}, request=request)
+
+    # def save(self, *args, **kwargs):
+    #     if self.paradigm:
+    #         super().save(*args, **kwargs)
+
 
 class Framework(models.Model):
     """
@@ -86,6 +104,9 @@ class Framework(models.Model):
     def __str__(self):
         return self.name
 
+    def get_api_url(self, request=None):
+        return reverse('framework-detail', kwargs={'pk': self.pk}, request=request)
+
 
 class Programmer(models.Model):
     """
@@ -103,6 +124,9 @@ class Programmer(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_api_url(self, request=None):
+        return reverse('programmer-detail', kwargs={'pk': self.pk}, request=request)
 
 
 def most_popular_language():

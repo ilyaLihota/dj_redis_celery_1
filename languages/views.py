@@ -27,12 +27,14 @@ class ParadigmListView(APIView):
     Retrieve a list of paradigms.
     """
     def get(self, request):
-        # Get all paradigms from db.
         paradigms = Paradigm.objects.all()
-        # Serialize paradigms to JSON.
         serializer = ParadigmSerializer(paradigms,
-                                        many=True)
+                                        many=True,
+                                        context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def get_serializer_context(self, *args, **kwargs):
+        return {'request': self.request}
 
 
 class ParadigmCreateView(APIView):
@@ -40,11 +42,9 @@ class ParadigmCreateView(APIView):
     Create the paradigm instance.
     """
     def post(self, request):
-        # Get data from request.
         data = request.data
-        print('\n\nview: {}\n\n'.format(data))
-        # Serialize data to JSON.
-        serializer = ParadigmSerializer(data=data)
+        serializer = ParadigmSerializer(data=data,
+                                        context={'request': request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -56,9 +56,9 @@ class ParadigmDetailView(APIView):
     Retrieve the paradigm instance.
     """
     def get(self, request, pk):
-        # Get the paradigm from db.
         paradigm = get_object_or_404(Paradigm, pk=pk)
-        serializer = ParadigmSerializer(paradigm)
+        serializer = ParadigmSerializer(paradigm,
+                                        context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -67,13 +67,11 @@ class ParadigmUpdateView(APIView):
     Update the paradigm instance.
     """
     def put(self, request, pk):
-        # Get the paradigm from db.
         paradigm = get_object_or_404(Paradigm, pk=pk)
-        print('paradigm: {}'.format(paradigm))
-        # Get data from request.
         data = request.data
         serializer = ParadigmSerializer(paradigm,
-                                        data=data)
+                                        data=data,
+                                        context={'request': request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -85,7 +83,6 @@ class ParadigmDeleteView(APIView):
     Delete the paradigm instance.
     """
     def delete(self, request, pk):
-        # Get the paradigm from db.
         paradigm = get_object_or_404(Paradigm, pk=pk)
         paradigm.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
@@ -99,8 +96,12 @@ class LanguageListView(APIView):
     def get(self, request):
         languages = Language.objects.all()
         serializer = LanguageSerializer(languages,
-                                        many=True)
+                                        many=True,
+                                        context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+    def get_serializer_context(self, *args, **kwargs):
+        return {'request': self.request}
 
 
 class LanguageCreateView(APIView):
@@ -109,7 +110,8 @@ class LanguageCreateView(APIView):
     """
     def post(self, request):
         data = request.data
-        serializer = LanguageSerializer(data=data)
+        serializer = LanguageSerializer(data=data,
+                                        context={'request': request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -122,8 +124,8 @@ class LanguageDetailView(APIView):
     """
     def get(self, request, pk):
         language = get_object_or_404(Language, pk=pk)
-        print('in view: {}'.format(language))
-        serializer = LanguageSerializer(language)
+        serializer = LanguageSerializer(language,
+                                        context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -158,7 +160,8 @@ class ProgrammerListView(APIView):
     def get(self, request):
         programmers = Programmer.objects.all()
         serializer = ProgrammerSerializer(programmers,
-                                          many=True)
+                                          many=True,
+                                          context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -168,7 +171,8 @@ class ProgrammerCreateView(APIView):
     """
     def post(self, request):
         data = request.data
-        serializer = ProgrammerSerializer(data=data)
+        serializer = ProgrammerSerializer(data=data,
+                                          context={'request': request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -181,7 +185,8 @@ class ProgrammerDetailView(APIView):
     """
     def get(self, request, pk):
         programmer = get_object_or_404(Programmer, pk=pk)
-        serializer = ProgrammerSerializer(programmer)
+        serializer = ProgrammerSerializer(programmer,
+                                          context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -192,7 +197,8 @@ class ProgrammerUpdateView(APIView):
     def put(self, request, pk):
         programmer = get_object_or_404(Programmer, pk=pk)
         serializer = ProgrammerSerializer(programmer,
-                                          data=request.data)
+                                          data=request.data,
+                                          context={'request': request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -217,10 +223,13 @@ class ProgrammerLikeView(APIView):
         programmer = get_object_or_404(Programmer, pk=pk)
 
         if programmer.likes is not None:
-            request.data['likes'] += programmer.likes
+            request.data['likes'] = programmer.likes + 1
+        else:
+            request.data['likes'] = 1
 
         serializer = ProgrammerSerializer(programmer,
-                                          data=request.data)
+                                          data=request.data,
+                                          context={'request': request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
@@ -234,7 +243,8 @@ class FrameworkListView(APIView):
     def get(self, request):
         frameworks = Framework.objects.all()
         serializer = FrameworkSerializer(frameworks,
-                                         many=True)
+                                         many=True,
+                                         context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -244,7 +254,8 @@ class FrameworkCreateView(APIView):
     """
     def post(self, request):
         data = request.data
-        serializer = FrameworkSerializer(data=data)
+        serializer = FrameworkSerializer(data=data,
+                                         context={'request': request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -257,7 +268,8 @@ class FrameworkDetailView(APIView):
     """
     def get(self, request, pk):
         framework = get_object_or_404(Framework, pk=pk)
-        serializer = FrameworkSerializer(framework)
+        serializer = FrameworkSerializer(framework,
+                                         context={'request': request})
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 
@@ -268,7 +280,8 @@ class FrameworkUpdateView(APIView):
     def put(self, request, pk):
         framework = get_object_or_404(Framework, pk=pk)
         serializer = FrameworkSerializer(framework,
-                                         data=request.data)
+                                         data=request.data,
+                                         context={'request': request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
