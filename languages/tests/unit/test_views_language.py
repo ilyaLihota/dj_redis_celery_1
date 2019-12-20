@@ -17,15 +17,21 @@ class GetAllLanguagesTest(TestCase):
     """
     def setUp(self):
         self.test_paradigm1 = Paradigm.objects.create(name='functional')
-        self.test_paradigm2 = Paradigm.objects.create(name='procedure')
-        self.test_paradigm3 = Paradigm.objects.create(name='object_oriented')
 
-        self.test_language1 = Language.objects.create(name='Scala')
-        self.test_language1.paradigm.set([self.test_paradigm1])
-        self.test_language2 = Language.objects.create(name='Python')
-        self.test_language2.paradigm.set([self.test_paradigm2])
-        self.test_language3 = Language.objects.create(name='Java')
-        self.test_language3.paradigm.set([self.test_paradigm3])
+        self.test_language1 = Language.objects.create(id=1, name='Scala')
+        self.test_language1.paradigm.add(self.test_paradigm1)
+        self.test_language1.save()
+
+        self.test_paradigm2 = Paradigm.objects.create(name='procedure')
+        self.test_language2 = Language.objects.create(id=2, name='Python')
+        self.test_language2.paradigm.add(self.test_paradigm2)
+        self.test_language2.save()
+
+
+        self.test_paradigm3 = Paradigm.objects.create(name='object_oriented')
+        self.test_language3 = Language.objects.create(id=3, name='Java')
+        self.test_language3.paradigm.add(self.test_paradigm3)
+        self.test_language3.save()
 
         self.list_url = reverse('language-list')
 
@@ -33,9 +39,8 @@ class GetAllLanguagesTest(TestCase):
         """
         Test case for getting list of existing languages.
         """
-        # Get API response.
         response = self.client.get(self.list_url)
-        # Get data from db.
+
         languages = Language.objects.all()
         serializer = LanguageSerializer(languages, many=True)
 
@@ -51,11 +56,12 @@ class GetSingleLanguageTest(TestCase):
         # Create a test paradigm which we will refer.
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         # Create a test language.
-        self.test_language = Language.objects.create(name='test_language')
+        self.test_language = Language.objects.create(id=1, name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
+        self.test_language.save()
 
         self.valid_detail_url = reverse('language-detail',
-                                  kwargs={'pk': self.test_language.pk})
+                                        kwargs={'pk': self.test_language.pk})
         self.invalid_detail_url = reverse('language-detail',
                                           kwargs={'pk': 2000})
 
@@ -128,8 +134,9 @@ class UpdateSingleLanguageTest(TestCase):
         # Create a test paradigm which we will refer.
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         # Create a test language.
-        self.test_language = Language.objects.create(name='test_language')
+        self.test_language = Language.objects.create(id=1, name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
+        self.test_language.save()
 
         self.valid_update_url = reverse('language-update',
                                         kwargs={'pk': self.test_language.pk})
@@ -174,13 +181,15 @@ class DeleteSingleLanguageTest(TestCase):
         # Create a test paradigm which we will refer.
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         # Create a test language.
-        self.test_language = Language.objects.create(name='test_language')
+        self.test_language = Language.objects.create(id=1, name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
+        self.test_language.save()
 
         self.valid_delete_url = reverse('language-delete',
                                         kwargs={'pk': self.test_language.pk})
         self.invalid_delete_url = reverse('language-delete',
                                           kwargs={'pk': 2000})
+
 
     def test_delete_valid_single_language(self):
         response = self.client.delete(self.valid_delete_url)

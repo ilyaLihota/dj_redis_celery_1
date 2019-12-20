@@ -16,12 +16,9 @@ class GetAllFrameworks(TestCase):
     Test module for getting all frameworks.
     """
     def setUp(self):
-        # Create a test paradigm which we will refer.
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
-        # Create a test language.
         self.test_language = Language.objects.create(name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
-        # Create a test framework.
         self.test_framework1 = Framework.objects.create(name='test_framework1',
                                                         languages=self.test_language)
         self.test_framework2 = Framework.objects.create(name='test_framework2',
@@ -34,7 +31,8 @@ class GetAllFrameworks(TestCase):
     def test_get_all_frameworks(self):
         response = self.client.get(self.list_url)
         test_frameworks = Framework.objects.all()
-        serializer = FrameworkSerializer(test_frameworks, many=True)
+        serializer = FrameworkSerializer(test_frameworks,
+                                         many=True)
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data, serializer.data)
@@ -45,12 +43,9 @@ class GetSingleFrameworkTest(TestCase):
     Test module for getting the single framework.
     """
     def setUp(self):
-        # Create a test paradigm which we will refer.
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
-        # Create a test language.
         self.test_language = Language.objects.create(name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
-        # Create a test framework.
         self.test_framework = Framework.objects.create(name='test_framework',
                                                        languages=self.test_language)
 
@@ -78,9 +73,7 @@ class CreateSingleFrameworkTest(TestCase):
     Test module for creating the single framework.
     """
     def setUp(self):
-        # Create a test paradigm which we will refer.
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
-        # Create a test language.
         self.test_language = Language.objects.create(name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
 
@@ -95,8 +88,8 @@ class CreateSingleFrameworkTest(TestCase):
         response = self.client.post(self.create_url,
                                     data=self.valid_payload,
                                     content_type=self.content_type)
-        test_farmework = Framework.objects.get(pk=response.data['id'])
-        serializer = FrameworkSerializer(test_farmework)
+        test_framework = Framework.objects.get(pk=response.data['id'])
+        serializer = FrameworkSerializer(test_framework)
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(response.data, serializer.data)
@@ -114,12 +107,9 @@ class UpdateSingleFrameworkTest(TestCase):
     Test module for updating the single framework.
     """
     def setUp(self):
-        # Create a test paradigm which we will refer.
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
-        # Create a test language.
         self.test_language = Language.objects.create(name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
-
         self.test_framework = Framework.objects.create(name='test_framework',
                                                        languages=self.test_language)
 
@@ -137,7 +127,8 @@ class UpdateSingleFrameworkTest(TestCase):
         response = self.client.put(self.valid_update_url,
                                    data=self.valid_payload,
                                    content_type=self.content_type)
-        test_framework = Framework.objects.get(pk=response.data['id'])
+
+        test_framework = Framework.objects.get(pk=self.test_framework.pk)
         serializer = FrameworkSerializer(test_framework)
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
@@ -163,9 +154,7 @@ class DeleteSingleFrameworkTest(TestCase):
     Test module for deleting the single framework.
     """
     def setUp(self):
-        # Create a test paradigm which we will refer.
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
-        # Create a test language.
         self.test_language = Language.objects.create(name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
 

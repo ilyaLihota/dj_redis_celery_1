@@ -29,6 +29,7 @@ class GetAllParadigmsTest(TestCase):
         # Get data from db.
         paradigms = Paradigm.objects.all()
         serializer = ParadigmSerializer(paradigms, many=True)
+        print(serializer.data)
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data, serializer.data)

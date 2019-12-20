@@ -20,32 +20,13 @@ class LikeProgrammerTest(TestCase):
                               'languages': [self.test_language.pk]}
 
         self.valid_update_url = reverse('programmer-like',
-                                           kwargs={'pk': self.test_programmer.pk})
+                                        kwargs={'pk': self.test_programmer.pk})
 
     def test_update_valid_like_programmer_valid_payload(self):
-        response = self.client.put(self.valid_update_url,
-                                   data=self.valid_payload,
-                                   content_type='application/json')
+        response = self.client.get(self.valid_update_url)
 
         test_programmer = Programmer.objects.get(pk=self.test_programmer.pk)
         serializer = ProgrammerSerializer(test_programmer)
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data['likes'], serializer.data['likes'])
-
-    def test_update_invalid_like_programmer_valid_payload(self):
-        response = self.client.put(reverse('programmer-like',
-                                           kwargs={'pk': 2000}),
-                                   data=self.valid_payload,
-                                   content_type='application/json')
-
-        self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
-
-    def test_update_valid_like_programmer_invalid_payload(self):
-        response = self.client.put(self.valid_update_url,
-                                   data={'name': self.test_programmer.name,
-                                         'likes': 'no likes',
-                                         'languages': [self.test_language.pk]},
-                                   content_type='application/json')
-
-        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)

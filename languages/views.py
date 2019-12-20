@@ -219,21 +219,19 @@ class ProgrammerLikeView(APIView):
     """
     Add like to the programming rating.
     """
-    def put(self, request, pk):
+    def get(self, request, pk):
         programmer = get_object_or_404(Programmer, pk=pk)
 
         if programmer.likes is not None:
-            request.data['likes'] = programmer.likes + 1
+            programmer.likes += 1
         else:
-            request.data['likes'] = 1
+            programmer.likes = 1
 
+        programmer.save()
         serializer = ProgrammerSerializer(programmer,
-                                          data=request.data,
                                           context={'request': request})
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class FrameworkListView(APIView):
