@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 from django.conf import settings
 from django.db.models.signals import post_save, pre_save
@@ -108,12 +109,15 @@ class Programmer(models.Model):
     def number_likes(self):
         return self.likes
 
-    def add_like(self):
-        self.likes += 1
-        self.save()
+    def add_like(self, user):
+        if self not in user.liked_programmers.all():
+            self.likes += 1
+            self.users_like.add(user)
+            self.save()
 
-    def remove_like(self):
-        if self.likes > 0:
+    def remove_like(self, user):
+        if self in user.liked_programmers.all() and self.likes > 0:
+            self.users_like.remove(user)
             self.likes -= 1
             self.save()
 
@@ -138,3 +142,20 @@ def most_popular_language():
             popular_language = language
 
     return popular_language
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    liked_programmers = models.ManyToManyField(Programmer,
+                                               related_name='users_like')
+
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
+
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.profile.save()

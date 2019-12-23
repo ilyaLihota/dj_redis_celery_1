@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from rest_framework import generics, mixins, renderers, status
 from rest_framework.decorators import api_view
@@ -5,7 +6,7 @@ from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework.views import APIView
 
-from .models import Paradigm, Language, Programmer, Framework
+from .models import Paradigm, Language, Programmer, Framework, Profile
 from .serializers import ParadigmSerializer, LanguageSerializer, ProgrammerSerializer, FrameworkSerializer
 
 
@@ -230,8 +231,10 @@ class ProgrammerAddLikeView(APIView):
     Add one like to the programmer.
     """
     def patch(self, request, pk):
+        user = get_object_or_404(Profile, user_id=request.user.pk)
         programmer = get_object_or_404(Programmer, pk=pk)
-        programmer.add_like()
+        programmer.add_like(user)
+
         serializer = ProgrammerSerializer(programmer)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -241,8 +244,11 @@ class ProgrammerRemoveLikeView(APIView):
     Remove one like from the programmer.
     """
     def patch(self, request, pk):
+        user = get_object_or_404(Profile, user_id=request.user.pk)
         programmer = get_object_or_404(Programmer, pk=pk)
-        programmer.remove_like()
+
+        programmer.remove_like(user)
+
         serializer = ProgrammerSerializer(programmer)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
