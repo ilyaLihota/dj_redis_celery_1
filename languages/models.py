@@ -110,10 +110,12 @@ class Programmer(models.Model):
 
     def add_like(self):
         self.likes += 1
+        self.save()
 
     def remove_like(self):
         if self.likes > 0:
             self.likes -= 1
+            self.save()
 
     class Meta:
         ordering = ['name']

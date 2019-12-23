@@ -36,6 +36,25 @@ class LikeProgrammerModelTest(TestCase):
         self.assertEqual(self.test_programmer.likes, 0)
 
 
+class NumberProgrammerLikesViewTest(TestCase):
+    """
+    Test module for ProgrammerLikesView.
+    """
+    def setUp(self):
+        self.test_language = Language.objects.create(name='test_language')
+        self.test_programmer = Programmer.objects.create(name='test_programmer')
+        self.test_programmer.languages.add(self.test_language)
+
+    def test_get_number_likes_with_view(self):
+        response = self.client.get(reverse('programmer-likes',
+                                           kwargs={'pk': self.test_programmer.pk}))
+        test_programmer = Programmer.objects.get(pk=self.test_programmer.pk)
+        serializer = ProgrammerSerializer(test_programmer)
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data, serializer.data['likes'])
+
+
 class AddLikeProgrammerViewTest(TestCase):
     """
     Test module for ProgrammerAddLikeView.
@@ -49,7 +68,7 @@ class AddLikeProgrammerViewTest(TestCase):
                                     kwargs={'pk': self.test_programmer.pk})
 
     def test_add_like_with_view(self):
-        response = self.client.get(self.add_like_url)
+        response = self.client.patch(self.add_like_url)
         test_programmer = Programmer.objects.get(pk=response.data['id'])
         serializer = ProgrammerSerializer(test_programmer)
 
@@ -72,7 +91,7 @@ class RemoveLikeProgrammerViewTest(TestCase):
     def test_remove_like_with_view(self):
         self.test_programmer.add_like()
         self.test_programmer.add_like()
-        response = self.client.get(self.remove_like_url)
+        response = self.client.patch(self.remove_like_url)
         test_programmer = Programmer.objects.get(pk=response.data['id'])
         serializer = ProgrammerSerializer(test_programmer)
 
@@ -80,7 +99,7 @@ class RemoveLikeProgrammerViewTest(TestCase):
         self.assertEqual(response.data, serializer.data)
 
     def test_remove_like_if_number_likes_zero_with_view(self):
-        response = self.client.get(self.remove_like_url)
+        response = self.client.patch(self.remove_like_url)
         test_programmer = Programmer.objects.get(pk=response.data['id'])
         serializer = ProgrammerSerializer(test_programmer)
 
