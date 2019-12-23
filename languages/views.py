@@ -215,22 +215,27 @@ class ProgrammerDeleteView(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class ProgrammerLikeView(APIView):
+class ProgrammerAddLikeView(APIView):
     """
-    Add like to the programming rating.
+    Add one like to the programmer.
     """
     def get(self, request, pk):
         programmer = get_object_or_404(Programmer, pk=pk)
-
-        if programmer.likes is not None:
-            programmer.likes += 1
-        else:
-            programmer.likes = 1
-
+        programmer.add_like()
         programmer.save()
-        serializer = ProgrammerSerializer(programmer,
-                                          context={'request': request})
+        serializer = ProgrammerSerializer(programmer)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
+
+class ProgrammerRemoveLikeView(APIView):
+    """
+    Remove one like from the programmer.
+    """
+    def get(self, request, pk):
+        programmer = get_object_or_404(Programmer, pk=pk)
+        programmer.remove_like()
+        programmer.save()
+        serializer = ProgrammerSerializer(programmer)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
 

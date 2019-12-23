@@ -22,7 +22,10 @@ urlpatterns = [
     path('api/v1/programmers/create/', views.ProgrammerCreateView.as_view(), name='programmer-create'),
     path('api/v1/programmers/<int:pk>/update/', views.ProgrammerUpdateView.as_view(), name='programmer-update'),
     path('api/v1/programmers/<int:pk>/delete/', views.ProgrammerDeleteView.as_view(), name='programmer-delete'),
-    path('api/v1/programmers/<int:pk>/like/', views.ProgrammerLikeView.as_view(), name='programmer-like'),
+    path('api/v1/programmers/<int:pk>/add_like/', views.ProgrammerAddLikeView.as_view(), name='programmer-add-like'),
+    path('api/v1/programmers/<int:pk>/remove_like/',
+         views.ProgrammerRemoveLikeView.as_view(),
+         name='programmer-remove-like'),
 
     path('api/v1/frameworks/', views.FrameworkListView.as_view(), name='framework-list'),
     path('api/v1/frameworks/<int:pk>/', views.FrameworkDetailView.as_view(), name='framework-detail'),

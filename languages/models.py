@@ -27,11 +27,6 @@ class Paradigm(models.Model):
     def __str__(self):
         return self.name
 
-    # def get_api_url(self, request=None):
-    #     return reverse('paradigm-detail',
-    #                    kwargs={'pk': self.pk},
-    #                    request=request)
-
 
 class Language(models.Model):
     """
@@ -73,13 +68,6 @@ class Language(models.Model):
     def __str__(self):
         return self.name
 
-    # def get_api_url(self, request=None):
-    #     return reverse('language-detail', kwargs={'pk': self.pk}, request=request)
-
-    # def save(self, *args, **kwargs):
-    #     if self.paradigm:
-    #         super().save(*args, **kwargs)
-
 
 class Framework(models.Model):
     """
@@ -104,29 +92,34 @@ class Framework(models.Model):
     def __str__(self):
         return self.name
 
-    # def get_api_url(self, request=None):
-    #     return reverse('framework-detail', kwargs={'pk': self.pk}, request=request)
-
 
 class Programmer(models.Model):
     """
     Describes a programmer.
     """
     name = models.CharField(max_length=50)
-    likes = models.PositiveIntegerField(null=True)
+    likes = models.PositiveIntegerField(default=0)
     languages = models.ManyToManyField(Language,
                                        related_name='programmers')
     frameworks = models.ManyToManyField(Framework,
                                         related_name='programmers')
+
+    @property
+    def number_likes(self):
+        return self.likes
+
+    def add_like(self):
+        self.likes += 1
+
+    def remove_like(self):
+        if self.likes > 0:
+            self.likes -= 1
 
     class Meta:
         ordering = ['name']
 
     def __str__(self):
         return self.name
-
-    # def get_api_url(self, request=None):
-    #     return reverse('programmer-detail', kwargs={'pk': self.pk}, request=request)
 
 
 def most_popular_language():
