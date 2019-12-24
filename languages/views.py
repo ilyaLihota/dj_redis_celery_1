@@ -1,4 +1,3 @@
-from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from rest_framework import generics, mixins, renderers, status
 from rest_framework.decorators import api_view

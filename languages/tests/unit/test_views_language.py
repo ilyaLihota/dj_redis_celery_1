@@ -1,8 +1,9 @@
 import pytest
 
-from django.test import TestCase, Client
+from django.contrib.auth.models import User
 from django.urls import reverse
 from rest_framework import status
+from rest_framework.test import APITestCase, APIClient
 
 from languages.models import Paradigm, Language
 from languages.serializers import LanguageSerializer
@@ -11,11 +12,16 @@ from languages.serializers import LanguageSerializer
 pytestmark = pytest.mark.django_db
 
 
-class GetAllLanguagesTest(TestCase):
+class GetAllLanguagesTest(APITestCase):
     """
     Test module for getting all languages.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         self.test_paradigm1 = Paradigm.objects.create(name='functional')
 
         self.test_language1 = Language.objects.create(id=1, name='Scala')
@@ -48,11 +54,16 @@ class GetAllLanguagesTest(TestCase):
         self.assertEqual(response.data, serializer.data)
 
 
-class GetSingleLanguageTest(TestCase):
+class GetSingleLanguageTest(APITestCase):
     """
     Test module for getting the single paradigm.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         # Create a test paradigm which we will refer.
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         # Create a test language.
@@ -88,11 +99,16 @@ class GetSingleLanguageTest(TestCase):
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
 
-class CreateSingleLanguageTest(TestCase):
+class CreateSingleLanguageTest(APITestCase):
     """
     Test module for creating the single language instance.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         self.create_url = reverse('language-create')
         # Create a test paradigm which we will refer.
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
@@ -104,8 +120,7 @@ class CreateSingleLanguageTest(TestCase):
         # Create a language instance with POST.
         response = self.client.post(self.create_url,
                                     data={'name': 'test_language',
-                                          'paradigm': [self.test_paradigm.pk]},
-                                    content_type='application/json')
+                                          'paradigm': [self.test_paradigm.pk]})
         # Get created language instance from test db.
         test_language = Language.objects.get(pk=response.data['id'])
         serializer = LanguageSerializer(test_language)
@@ -126,11 +141,16 @@ class CreateSingleLanguageTest(TestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
 
-class UpdateSingleLanguageTest(TestCase):
+class UpdateSingleLanguageTest(APITestCase):
     """
     Test module for updating the single language instance.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         # Create a test paradigm which we will refer.
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         # Create a test language.
@@ -150,8 +170,7 @@ class UpdateSingleLanguageTest(TestCase):
 
     def test_update_valid_single_language_valid_payload(self):
         response = self.client.put(self.valid_update_url,
-                                   data=self.valid_payload,
-                                   content_type=self.content_type)
+                                   data=self.valid_payload)
         test_language = Language.objects.get(pk=self.test_language.pk)
         serializer = LanguageSerializer(test_language)
 
@@ -173,11 +192,16 @@ class UpdateSingleLanguageTest(TestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
 
-class DeleteSingleLanguageTest(TestCase):
+class DeleteSingleLanguageTest(APITestCase):
     """
     Test module for deleting the single language instance.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         # Create a test paradigm which we will refer.
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         # Create a test language.

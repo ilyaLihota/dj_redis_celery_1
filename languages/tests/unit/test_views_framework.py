@@ -1,8 +1,9 @@
 import pytest
 
-from django.test import TestCase, Client
+from django.contrib.auth.models import User
 from django.urls import reverse
 from rest_framework import status
+from rest_framework.test import APITestCase, APIClient
 
 from languages.models import Paradigm, Language, Framework
 from languages.serializers import FrameworkSerializer
@@ -11,11 +12,16 @@ from languages.serializers import FrameworkSerializer
 pytestmark = pytest.mark.django_db
 
 
-class GetAllFrameworks(TestCase):
+class GetAllFrameworks(APITestCase):
     """
     Test module for getting all frameworks.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         self.test_language = Language.objects.create(name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
@@ -38,11 +44,16 @@ class GetAllFrameworks(TestCase):
         self.assertEqual(response.data, serializer.data)
 
 
-class GetSingleFrameworkTest(TestCase):
+class GetSingleFrameworkTest(APITestCase):
     """
     Test module for getting the single framework.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         self.test_language = Language.objects.create(name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
@@ -68,11 +79,16 @@ class GetSingleFrameworkTest(TestCase):
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
 
-class CreateSingleFrameworkTest(TestCase):
+class CreateSingleFrameworkTest(APITestCase):
     """
     Test module for creating the single framework.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         self.test_language = Language.objects.create(name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
@@ -86,8 +102,7 @@ class CreateSingleFrameworkTest(TestCase):
 
     def test_create_valid_single_framework(self):
         response = self.client.post(self.create_url,
-                                    data=self.valid_payload,
-                                    content_type=self.content_type)
+                                    data=self.valid_payload)
         test_framework = Framework.objects.get(pk=response.data['id'])
         serializer = FrameworkSerializer(test_framework)
 
@@ -102,11 +117,16 @@ class CreateSingleFrameworkTest(TestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
 
-class UpdateSingleFrameworkTest(TestCase):
+class UpdateSingleFrameworkTest(APITestCase):
     """
     Test module for updating the single framework.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         self.test_language = Language.objects.create(name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
@@ -125,8 +145,7 @@ class UpdateSingleFrameworkTest(TestCase):
 
     def test_update_valid_single_framework_valid_payload(self):
         response = self.client.put(self.valid_update_url,
-                                   data=self.valid_payload,
-                                   content_type=self.content_type)
+                                   data=self.valid_payload)
 
         test_framework = Framework.objects.get(pk=self.test_framework.pk)
         serializer = FrameworkSerializer(test_framework)
@@ -149,11 +168,16 @@ class UpdateSingleFrameworkTest(TestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
 
-class DeleteSingleFrameworkTest(TestCase):
+class DeleteSingleFrameworkTest(APITestCase):
     """
     Test module for deleting the single framework.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         self.test_language = Language.objects.create(name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)

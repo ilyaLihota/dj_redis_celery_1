@@ -1,8 +1,9 @@
 import pytest
 
-from django.test import TestCase, Client
+from django.contrib.auth.models import User
 from django.urls import reverse
 from rest_framework import status
+from rest_framework.test import APITestCase, APIClient
 
 from languages.models import Paradigm, Language, Programmer
 from languages.serializers import ProgrammerSerializer
@@ -11,11 +12,16 @@ from languages.serializers import ProgrammerSerializer
 pytestmark = pytest.mark.django_db
 
 
-class GetAllProgrammersTest(TestCase):
+class GetAllProgrammersTest(APITestCase):
     """
     Test module for getting the list of all programmers.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         self.test_language = Language.objects.create(name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
@@ -35,11 +41,16 @@ class GetAllProgrammersTest(TestCase):
         self.assertEqual(response.data, serializer.data)
 
 
-class GetSingleProgrammerTest(TestCase):
+class GetSingleProgrammerTest(APITestCase):
     """
     Test module for getting the single programmer.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         self.test_language = Language.objects.create(name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
@@ -65,11 +76,16 @@ class GetSingleProgrammerTest(TestCase):
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
 
 
-class CreateSingleProgrammerTest(TestCase):
+class CreateSingleProgrammerTest(APITestCase):
     """
     Test module for creating the single programmer.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         self.test_language = Language.objects.create(name='test_language')
         self.test_language.paradigm.add(self.test_paradigm)
@@ -83,8 +99,7 @@ class CreateSingleProgrammerTest(TestCase):
 
     def test_post_valid_single_programmer(self):
         response = self.client.post(self.create_url,
-                                    data=self.valid_payload,
-                                    content_type=self.content_type)
+                                    data=self.valid_payload)
         test_programmer = Programmer.objects.get(pk=response.data['id'])
         serializer = ProgrammerSerializer(test_programmer)
 
@@ -99,11 +114,16 @@ class CreateSingleProgrammerTest(TestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
 
-class UpdateSingleProgrammerTest(TestCase):
+class UpdateSingleProgrammerTest(APITestCase):
     """
     Test module for updating the single programmer.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         # Create a test paradigm which we will refer.
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         # Create a test language.
@@ -125,8 +145,7 @@ class UpdateSingleProgrammerTest(TestCase):
 
     def test_update_valid_single_programmer_valid_payload(self):
         response = self.client.put(self.valid_update_url,
-                                   data=self.valid_payload,
-                                   content_type=self.content_type)
+                                   data=self.valid_payload)
         test_programmer = Programmer.objects.get(pk=response.data['id'])
         serializer = ProgrammerSerializer(test_programmer)
 
@@ -148,11 +167,16 @@ class UpdateSingleProgrammerTest(TestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
 
-class DeleteSingleProgrammerTest(TestCase):
+class DeleteSingleProgrammerTest(APITestCase):
     """
     Test module for deleting the single programmer.
     """
     def setUp(self):
+        user = User.objects.create(username='test_user',
+                                   password='password')
+        self.client = APIClient()
+        self.client.force_authenticate(user=user)
+
         # Create a test paradigm which we will refer.
         self.test_paradigm = Paradigm.objects.create(name='test_paradigm')
         # Create a test language.
